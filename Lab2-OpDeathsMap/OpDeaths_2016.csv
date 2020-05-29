@@ -1,0 +1,78 @@
+﻿Category,SubCategory,Indicator,Year,Geography,Geo_Group,Geo_ID,Demography,Demo_Group,Number,Cum_Number,Ave_Annual_Number,Crude_Rate,Lower_95CI_Crude_Rate,Upper_95CI_Crude_Rate,Age_Adj_Rate,Lower_95CI_Age_Adj_Rate,Upper_95CI_Age_Adj_Rate,Percent,Lower_95CI_Percent,Upper_95CI_Percent,Weight_Number,Weight_Percent,Lower_95CI_Weight_Percent,Upper_95CI_Weight_Percent,Map_Key,Flag
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,1-Rogers Park,1,,,9,,,16.4,7.5,31.1,16,7.3,28.1,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,2-West Ridge,2,,,5,,,7,2.3,16.2,6.8,2.2,14,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,3-Uptown,3,,,11,,,19.5,9.7,34.9,18.1,8.8,30.6,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,4-Lincoln Square,4,,,6,,,15.2,5.6,33.1,13.2,4.2,27.2,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,5-North Center,5,,,4,,,12.6,3.4,32.1,12.1,2.9,27.5,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,6-Lakeview,6,,,4,,,4.2,1.2,10.9,3.9,0.9,9.1,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,7-Lincoln Park,7,,,4,,,6.2,1.7,16,7.6,1.7,17.9,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,8-Near North Side,8,,,6,,,7.5,2.7,16.2,6.7,2.4,13.2,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,9-Edison Park,9,,,0,,,0,0,0,0,0,0,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,10-Norwood Park,10,,,6,,,16.2,5.9,35.3,18.7,6.6,37.1,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,11-Jefferson Park,11,,,6,,,23.6,8.7,51.3,24.5,8.9,48,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,12-Forest Glen,12,,,4,,,21.6,5.9,55.3,28.5,7.3,64,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,13-North Park,13,,,0,,,0,0,0,0,0,0,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,14-Albany Park,14,,,10,,,19.4,9.3,35.7,17.4,8.2,30,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,15-Portage Park,15,,,13,,,20.3,10.8,34.7,19.5,10.3,31.5,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,16-Irving Park,16,,,11,,,20.6,10.3,36.9,17.7,8.7,29.8,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,17-Dunning,17,,,4,,,9.5,2.6,24.4,9.6,2.6,21,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,18-Montclare,18,,,1,,,7.4,0.2,41.5,7.7,0.2,28.5,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,19-Belmont Cragin,19,,,13,,,16.5,8.8,28.2,17.4,9.2,28.1,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,20-Hermosa,20,,,2,,,8,1,28.9,6.5,0.8,18.2,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,21-Avondale,21,,,9,,,22.9,10.5,43.5,23.6,10.7,41.6,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,22-Logan Square,22,,,13,,,17.9,9.5,30.5,19.3,9.9,31.9,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,23-Humboldt Park,23,,,28,,,49.7,33,71.8,55.6,36.8,78.2,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,24-West Town,24,,,19,,,23.1,13.9,36.1,23.8,13.8,36.5,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,25-Austin,25,,,50,,,50.8,37.7,66.9,49.9,36.8,64.8,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,26-West Garfield Park,26,,,14,,,77.8,42.5,130.5,84.5,45.7,135,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,27-East Garfield Park,27,,,14,,,68.1,37.2,114.2,66.6,36.3,105.9,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,28-Near West Side,28,,,15,,,27.3,15.3,45.1,29.5,15.9,47.2,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,29-North Lawndale,29,,,29,,,80.8,54.1,116,86.1,57.6,120.4,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,30-South Lawndale,30,,,10,,,12.6,6,23.2,12.3,5.8,21.2,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,31-Lower West Side,31,,,8,,,22.4,9.7,44.1,21.3,8.9,39,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,32-Loop,32,,,2,,,6.8,0.8,24.7,6.4,0.5,19.5,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,33-Near South Side,33,,,3,,,14,2.9,41,16.2,3.3,39,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,34-Armour Square,34,,,0,,,0,0,0,0,0,0,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,35-Douglas,35,,,4,,,21.9,6,56.2,22.3,5.5,50.6,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,36-Oakland,36,,,1,,,16.9,0.4,94.1,16.5,0.4,61,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,37-Fuller Park,37,,,2,,,69.5,8.4,251.2,60.3,7,169.6,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,38-Grand Boulevard,38,,,8,,,36.5,15.8,71.9,38.5,16.6,69.5,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,39-Kenwood,39,,,2,,,11.2,1.4,40.5,11.6,1.4,32.4,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,40-Washington Park,40,,,4,,,34.1,9.3,87.4,39,10.6,85.6,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,41-Hyde Park,41,,,3,,,11.7,2.4,34.1,12.9,2.3,32.2,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,42-Woodlawn,42,,,4,,,16.8,4.6,43.1,17.3,4.7,38,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,43-South Shore,43,,,19,,,36.5,22,57,32.3,19.1,48.7,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,44-Chatham,44,,,11,,,35.5,17.7,63.4,32.5,15.6,55.6,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,45-Avalon Park,45,,,1,,,9.8,0.2,54.7,8.3,0.2,30.8,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,46-South Chicago,46,,,11,,,35.3,17.6,63.1,34.7,17,58.5,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,47-Burnside,47,,,3,,,102.9,21.2,300.7,97.3,19,238.3,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,48-Calumet Heights,48,,,1,,,7.2,0.2,40.3,6.7,0.2,24.6,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,49-Roseland,49,,,18,,,40.3,23.9,63.8,41.2,24.1,62.7,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,50-Pullman,50,,,1,,,13.7,0.3,76.1,14.1,0.4,52.1,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,51-South Deering,51,,,1,,,6.6,0.2,36.9,5.2,0.1,19.2,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,52-East Side,52,,,3,,,13,2.7,38,12.8,2.6,30.9,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,53-West Pullman,53,,,14,,,47.2,25.8,79.2,52,28,83.3,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,54-Riverdale,54,,,3,,,46.3,9.5,135.3,65,13.4,156.6,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,55-Hegewisch,55,,,3,,,31.8,6.6,93,31.3,6.2,76.5,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,56-Garfield Ridge,56,,,10,,,29,13.9,53.3,30,14.3,51.4,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,57-Archer Heights,57,,,2,,,14.9,1.8,53.9,14.4,1.7,40.7,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,58-Brighton Park,58,,,6,,,13.2,4.9,28.8,12.7,4.5,24.9,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,59-McKinley Park,59,,,1,,,6.4,0.2,35.7,5.6,0.1,20.8,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,60-Bridgeport,60,,,8,,,25,10.8,49.3,23.4,9.9,42.4,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,61-New City,61,,,12,,,27,14,47.2,31.1,15.8,51.5,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,62-West Elsdon,62,,,2,,,11,1.3,39.9,10.3,1.2,28.9,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,63-Gage Park,63,,,2,,,5,0.6,18.1,5.6,0.7,15.5,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,64-Clearing,64,,,5,,,21.6,7,50.4,21.7,6.9,44.7,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,65-West Lawn,65,,,7,,,21,8.4,43.2,22.1,8.8,41.5,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,66-Chicago Lawn,66,,,17,,,30.6,17.8,48.9,33.9,19.6,52.1,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,67-West Englewood,67,,,15,,,42.2,23.6,69.7,43.8,24.2,69,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,68-Englewood,68,,,16,,,52.2,29.8,84.8,58.6,33,91.3,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,69-Greater Grand Crossing,69,,,12,,,36.8,19,64.3,41.3,20.9,68.6,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,70-Ashburn,70,,,1,,,2.4,0.1,13.6,2.9,0.1,10.5,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,71-Auburn Gresham,71,,,9,,,18.5,8.4,35.1,16.1,7.3,28.2,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,72-Beverly,72,,,4,,,20,5.4,51.1,19.7,4.9,44.6,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,73-Washington Heights,73,,,6,,,22.6,8.3,49.3,22.2,7.7,44,,,,,,,,Quintiles,G
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,74-Mount Greenwood,74,,,2,,,10.5,1.3,37.8,10.5,1.2,29.6,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,75-Morgan Park,75,,,0,,,0,0,0,0,0,0,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,76-O'Hare,76,,,4,,,31.4,8.5,80.3,29.5,7.7,65.7,,,,,,,,Quintiles,F
+Mortality,Behavioral Health,Opioid-related overdose deaths,2016,Community Area,77-Edgewater,77,,,8,,,14.2,6.1,27.9,11,4.7,20,,,,,,,,Quintiles,G

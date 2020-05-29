@@ -1,0 +1,330 @@
+---
+title: "Lab 5. Modeling Neighborhoods"
+author: "M. Kolak, Center for Spatial Data Science"
+date: "initial July 3, 2018; updated May 1, 2020"
+output:
+  html_document:
+    theme: cosmo
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+# Overview
+
+In this practical, we will identify and quantify crimes at a local areal level for two major cities using data from open data portals. This week's objectives will be to:
+
+- wrangle and clean raw crime data in R
+- convert CSV to spatial points for analysis & visualization
+- enable and transform Coordinate Reference Systems (CRS)
+- spatially join points to tracts ('point in polygon' analysis)
+
+## Research Question
+This lab practical reflects work done in an actual research study. A team of clinicians, epidemiologists, and other health researchers were interested in comparing differences in access to trauma hospitals across three major cities. Victims of violent crime need quick access to trauma hospitals to ensure optimal results; if areas with disprortionately high homicides are especially far from trauma ERs, health outcomes can be disproportionately worse. The goal of this practical is to generate a new spatial variable, total number of homicides per census tract, in two major cities (LA and NYC) using raw data from each city's data portal, for further analysis. Homicides were used to proxy violent crime because differenes in reporting structures on violent crime were too different for effective comparison otherwise.
+
+You can read more about the study at: [Tung, E. L., Hampton, D. A., Kolak, M., Rogers, S. O., Yang, J. P., & Peek, M. E. (2019). Race/Ethnicity and Geographic Access to Urban Trauma Care. JAMA network open, 2(3), e190138-e190138.](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2727264).
+
+## Environment Setup
+
+For this lab, you'll need to have R and RStudio downloaded and installed on your system. We will work with the following libraries, so please be sure to have already installed:
+
+- sf
+- tmap
+- leaflet
+- data.table
+- tidyverse
+
+First, load the libraries we'll need for our lab.
+```{r, echo=FALSE}
+library(sf)
+library(tmap)
+library(leaflet)
+library(data.table)
+library(tidyverse)
+```
+
+Set your working directory.
+```{r}
+setwd("~/Desktop/Lab5-LACrimes")
+```
+
+# Clean & Wrangle Data
+
+We will be working with crime data from the Los Angeles open data portal first. When working with crime data, we will filter to the year of interest within the data portal, and then download the filtered dataset. This is because downloading all crimes produces an unnecessarily large dataset, from which we just need a short period of data. Unless you are interested in all crimes across time, start with a smaller subset that is more closely matched to your period of interest. As you get more comfortable with coding and optimizing speed and efficiency, your process may change.
+
+In this lab practical, all violent crimes from 2015 are provided as the filtered, downloaded dataset that we start with. From these violent crimes, we are tasked with identifying "homicides" to make more comparable variables between cities. We must identify rows coded as homicides in LA, and will later do the same for NYC. Note that each police department jurisdiction codes slightly differently. Identifying data for true and meaningful comparison is an important step in the research process.
+
+## Load CSV with `fread`
+Load the filtered CSV of crimes in Los Angeles from 2015. Here we use the `fread` function from the `data.table` package, which reads in CSV data much more quickly and efficiently then the base R system.
+
+```{r}
+LAcrime<-fread("LAPD2015_Violent.csv", header = T)
+head(LAcrime)
+```
+
+## Identify `unique` Code
+
+Which column stores crime information? Inspect all of them in detail. In this dataset, the "Crime Code Description" attribute field seems to include information we can explore in further detail to filter out homicides.
+
+Identify all possible crimes in the code description field using the `unique` function. Where such information is contained will change depending on the city and specific dataset you're working with.
+
+```{r}
+unique(LAcrime$`Crime Code Description`)
+```
+
+## Subset Data
+Let's subset the data to only include homicides. First, let's make sure our file is a proper data frame.
+
+```{r}
+LAcrime.df<- as.data.frame(LAcrime)
+```
+
+Next, we subset the data. In this base R form of subsetting, we identify all crime codes with the "Criminal Homicide" code. Note that because there are spaces in the column heading for this variable, we had to use single quotes around the column heading.
+
+```{r}
+# Base R subset:
+s1<-subset(LAcrime.df,LAcrime.df$`Crime Code Description`== "CRIMINAL HOMICIDE")
+```
+
+Here, we **bind** all the rows  (`rbind`) of the subset and give it a new name. This 'sticks' all the rows from our subset back together as a data frame. 
+
+```{r}
+LAcrime.hom<-rbind(s1)
+```
+
+**Challenge:** This base R approach is successful here, but there are many other ways of subsetting data in R that are more elegant (and don't require the data frame check or rbind step). As a challenge, explore more options on your own! Hint: check `filter` from `dplyr`.
+
+## Inspect Data
+
+Let's preview the first six rows of the data subset, and check dimensions. How many homicides were in LA in 2015? Hint: the total number of observations = crimes.
+
+```{r}
+head(s1)
+```
+
+## Save Cleaned Data
+Finally, let's write this subset to a CSV of homicide data in LA from 2015 to archive our data as we've wrangled it.
+```{r}
+write.csv(LAcrime.hom,"LAcrime_hom.csv")
+```
+
+# Convert CSV to Points
+While our CSV file includes location information, it is still *not* spatial data because the spatial dimension has not been enabled. Let's enable it.
+
+First, identify which long/lat fields we are using.  
+
+## Identify X,Y locations
+Coordinate information is stored as columns "longitude" and "latitude" (or X,Y coordinates) corresponding to:
+```{r}
+glimpse(LAcrime.hom[,c("longitude","latitude")])
+```
+
+Now we convert the crimes to points using the long/lat fields, and assign the standard projection of WGS84 using the SRID code **EPSG:4326** based on our "best guess" of the actual CRS. 
+
+Remember that long = x, lat = y! If you mix this up, your points will end up getting projected on the other side of the world. 
+
+Even if we want to convert to another CRS later, we must first "respect" the CRS that the long/lat data is currently in. We use the `st_as_sf` function from the `sf` package. Uncomment and run the line below.
+
+## Check long/lat structure
+Let's check the data structure of long/lat to first confirm they are numeric:
+
+```{r}
+str(LAcrime.hom[,c("longitude", "latitude")])
+```
+
+They are character data formats -- we need numeric numbers. A quick online search shows multiple ways to convert data structures in R. We will use the `as.numeric` function to convert these fields.
+
+```{r}
+LAcrime.hom$latitude <- as.numeric(LAcrime.hom$latitude)
+LAcrime.hom$longitude <- as.numeric(LAcrime.hom$longitude)
+```
+
+We get a new error stating that *"NAs introduced by coercion."* That suggests that we have a few observations that do not have either long/lat values! These will not be included in the final analysis. Note that we can't convert to a spatial data format unless we remove these. Uncomment and run the folllowing:
+
+```{r}
+LAcrime.pts <- st_as_sf(LAcrime.hom, coords = c("longitude","latitude"), crs = 4326)
+```
+If we run this expression as is, we get an error that *"missing values in coordinates not allowed."*
+
+## Troubleshoot
+### ID Missing Data
+Let's see if we can identify which observation(s) is(are) faulty. We'll use the `subset()` function to see which crimes have an NA value -- using the `is.na()` function to check for null values in the long or lat fields:
+
+```{r}
+LAcrime.hom.na <- subset(LAcrime.hom, is.na(LAcrime.hom[,c("longitude", "latitude")]))
+
+glimpse(LAcrime.hom.na) #1 observations
+```
+
+### Remove NA values
+In this case we have one observation that seems to have been incorrectly coded; while location information is present, the longitude value is empty. We could assign the location value, but in this case, we will be extra cautious and remove the observation. Here we just grab the long/lat fields and the unique ID. 
+
+```{r}
+LAcrime.hom2 <- na.omit(LAcrime.hom[,c("DR Number","longitude", "latitude")])
+str(LAcrime.hom2)
+```
+
+We use the `str()` function to ensure we have 1 less observation, for a total of 281 (out of 282). 
+
+**Challenge:** How would you get all the variables, minus the NA's in long/lat?
+
+
+### Convert & Inspect
+
+Now we can succesffully convert the data frame into a spatial data frame.
+```{r}
+LAcrime.pts <- st_as_sf(LAcrime.hom2, coords = c("longitude","latitude"), crs = 4326)
+
+```
+
+Let's plot our points to make sure they look like LA:
+```{r}
+plot(LAcrime.pts)
+```
+
+Again, if these points were not plotting correctly, you would need to check: (1) if you specified long/lat correctly or if they were flipped by accident, and (2) if the CRS you used was in fact the real CRS of the coordinates.
+
+### Save Clean Data
+We now have a subset of crime data for Los Angeles in 2015 that only includes homicides, recorded as a CSV, and now as a spatial point data frame. We'll write the homicide data with all features available to a shapefile for archiving. Uncomment and run.
+
+```{r}
+#st_write(LAcrime.pts,"LAcrime_hom.shp")
+```
+
+## Rinse and Repeat
+Next, do the same for the NYC dataset. What crime code description did you use? How many total homicides were there in NYC in 2015?  Were there any NA values you had to deal with in the lat/long fields? Save the cleaned NYC homicide dataset as a CSV and the cleaned NYC points as a SHP.
+
+# Standardize CRS
+
+## Load & Inspect 
+
+We'll rename the cleaned crime dataset to make it easier for analysis here. You could also load the new point shapefile you generated instead.
+
+```{r}
+LAcrimes<-LAcrime.pts
+```
+
+Next load the LA tract shapefile, as provided in the lab materials.
+
+```{r}
+LAtracts <- st_read("LAC_Shape.shp")
+```
+
+## Overlay Points & Polygons
+
+We can plot these quickly to ensure they are overlaying correctly. If they are, our coordinate systems are working correctly.
+
+```{r}
+## 1st layer (gets plotted first)
+tm_shape(LAtracts) + tm_borders(alpha = 0.4) + 
+  
+  ## 2nd layer (overlay)
+  tm_shape(LAcrime.pts) + tm_dots(size = 0.1, col="red") 
+```
+
+## Check CRS
+
+Check the Coordinate System/Projection for your data. 
+
+```{r}
+st_crs(LAcrimes) 
+```
+
+Are the coordinate systems for crime points and tracts the same?
+```{r}
+st_crs(LAtracts)
+```
+
+If they match, we are ready for point-in-polygon (PIP) or spatial join operation. R is very finicky about wanting an identical CRS specification.  Since they don't match exactly by R standards, we need to transform our files into the same projection.
+
+## Transform CRS 
+
+We'll use the LAtracts CRS as our main projection. We then transform LAcrimes into the new projection using the `st_transform` function.
+
+```{r}
+CRS.new <- st_crs(LAtracts)
+LAcrimes <- st_transform(LAcrimes, CRS.new)
+```
+
+Check the CRS of both datasets again. If they are identical you're ready to move onto the next step!
+
+# Point-in-Polygon 
+Our LA Crimes dataset is very small; we just kept the ID per point in case we need to merge more information from the raw data file later. We need to identify which census tract each crime occurred in, next.
+
+```{r}
+glimpse(LAcrimes)
+```
+
+## Spatial Join
+
+First we will spatially join Crimes and Tracts. This operations uses a `within` operation to essentially "stick" all attributes from census tracts to the crime data file, based on the *spatial location* or intersection of crimes in tracts. 
+```{r}
+crime_in_tract <- st_join(LAcrimes, LAtracts, join = st_within)
+glimpse(crime_in_tract)
+```
+
+Note that the `st_join` function assumed planar coordinates, though our actual CRS is not in a planar CRS. For our purposes, because the geographic space of LA is relatively small (compared to the surface of the Earth), it will be okay. For larger areas or to be more precise, you would need to research, identify, and transform all files into a different CRS.
+
+## Count Crimes per Tract
+Next, we'll count all crimes by tract using the `table` function. There are many ways to do this operation in R. Inspect the output.
+
+```{r}
+crime_tract_count <- as.data.frame(table(crime_in_tract$TRACTCE10))
+glimpse(crime_tract_count)
+```
+
+As a challenge, explore more options on your own using online R resources. See if you can identify ways to do this using `dyplyr` functions.
+
+## Rename Column Names
+We will next rename column names. 
+
+```{r}
+names(crime_tract_count) <- c("TRACTCE10","CrimeCt")
+glimpse(crime_tract_count)
+```
+
+## Merge Data
+Now we can merge our count table back to our master LAtracts spatial file. We will use the common key "TRACTCSE10" to merge these. Inspect.
+
+```{r}
+LAtracts_new <- merge(LAtracts, crime_tract_count, by="TRACTCE10")
+glimpse(LAtracts_new)
+```
+
+Our new spatially calculated variable "CrimeCt" is successfully added to our master spatial file.
+
+# Conclusions 
+
+## Visualize Ouput
+We'll use `tmap` to quickly plot our map. 
+
+```{r}
+tm_shape(LAtracts_new) + tm_fill("CrimeCt", n=4, pal = "BuPu", title="LA Homicides in 2015")
+```
+
+Next, let's generate an interactive map. Change the tmap mode to "view" -- note that it was in the "plot" mode by default.
+
+```{r}
+tmap_mode("view")
+```
+
+Now input the same code to map as before, and explore!
+
+```{r}
+tm_shape(LAtracts_new) + tm_fill("CrimeCt", n=4, pal = "BuPu", title="LA Homicides in 2015")
+```
+
+## Save your Shapefile
+Save the new shapefile you made using `st_write`.
+
+## Interpretations
+There is some apparent clustering of homicides in the central part of LA in 2015, and to a lesser extent the Northern section of the city. However, most tracts had no homicides and the total number of the year remain relatively small. In the next phase of analysis, this number will be used with additional data resources to better evaluate disparities in trauma hospital accessibility. 
+
+
+## Compare Across Cities
+
+Using the spatial data file you generated for NYC in the previous section, attempt to repeat the PIP operation with the NYC tract dataset. Are there any new errors that come up? Visualize your final NYC dataset showing count of Homicides by tract. Save as a shapfile. Revisit your interpretations. 
