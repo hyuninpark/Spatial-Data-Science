@@ -1,4 +1,4 @@
-# "Lab 2. Principles of Cartographic Design"
+# Lab 2. Principles of Cartographic Design
 
 ## Overview
 In this lab, you’ll gain familiarity with the GeoDa software.

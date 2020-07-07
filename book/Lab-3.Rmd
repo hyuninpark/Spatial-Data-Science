@@ -1,4 +1,4 @@
-# "Lab 3. Principles of Spatial Scale, Part 1"
+# Lab 3. Principles of Spatial Scale, Part 1
 West Virginia Coal Mining Spatial Analysis: County-Level Variations
 
 ## Overview

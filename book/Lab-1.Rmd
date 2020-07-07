@@ -1,4 +1,4 @@
-# "Lab 1. Intro to Spatial Data"
+# Lab 1. Intro to Spatial Data
 
 ## The bolded sentences need to be made more general, as they are specific to a particular version of the software
 

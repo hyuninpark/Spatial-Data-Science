@@ -2,11 +2,10 @@
 site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
+    number_sections: false
     lib_dir: book_assets
   bookdown::pdf_book:
     keep_tex: yes
 ---
 
 # Intro
-
-test

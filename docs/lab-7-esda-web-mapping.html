@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lab-5-modeling-neighborhoods.html"/>
+
+<script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Intro</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html"><i class="fa fa-check"></i>Lab 1. Intro to Spatial Data</a><ul>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#the-bolded-sentences-need-to-be-made-more-general-as-they-are-specific-to-a-particular-version-of-the-software"><i class="fa fa-check"></i>The bolded sentences need to be made more general, as they are specific to a particular version of the software</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#research-question"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#environment-setup"><i class="fa fa-check"></i>Environment Setup</a><ul>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#plugin"><i class="fa fa-check"></i>Plugin</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#basemap"><i class="fa fa-check"></i>Basemap</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#file-management"><i class="fa fa-check"></i>File Management</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#download-data"><i class="fa fa-check"></i>Download Data</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#transform-data"><i class="fa fa-check"></i>Transform Data</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#set-new-project-space"><i class="fa fa-check"></i>Set New Project Space</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#style-layers"><i class="fa fa-check"></i>Style Layers</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#calculate-and-style-buffers"><i class="fa fa-check"></i>Calculate and Style Buffers</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#add-labeled-community-areas"><i class="fa fa-check"></i>Add labeled community areas</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#compose-a-map"><i class="fa fa-check"></i>Compose a Map</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html"><i class="fa fa-check"></i>Lab 2. Principles of Cartographic Design</a><ul>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#overview-1"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#research-question-1"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#environment-setup-1"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#download-data-1"><i class="fa fa-check"></i>Download Data</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#inspect-data"><i class="fa fa-check"></i>Inspect Data</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#open-in-geoda"><i class="fa fa-check"></i>Open in GeoDa</a><ul>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#merge-data"><i class="fa fa-check"></i>Merge data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#data-classification"><i class="fa fa-check"></i>Data Classification</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#choropleth-mapping-in-geoda"><i class="fa fa-check"></i>Choropleth Mapping in GeoDa</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#next-steps"><i class="fa fa-check"></i>Next Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html"><i class="fa fa-check"></i>Lab 3. Principles of Spatial Scale, Part 1</a><ul>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#overview-2"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#research-question-2"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#environment-setup-2"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#download-data-2"><i class="fa fa-check"></i>Download Data</a><ul>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#coal-mining-job-data"><i class="fa fa-check"></i>Coal Mining Job Data</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#county-boundary-file-data"><i class="fa fa-check"></i>County Boundary File Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#merge-data-1"><i class="fa fa-check"></i>Merge Data</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#explore-data"><i class="fa fa-check"></i>Explore Data</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#add-another-time-period"><i class="fa fa-check"></i>Add Another Time Period</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#installations-for-next-week"><i class="fa fa-check"></i>Installations for Next Week</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html"><i class="fa fa-check"></i>Lab 4. Principles of Spatial Scale, Part 2</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#overview-3"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#research-question-3"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#environment-setup-3"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#need-for-finer-data"><i class="fa fa-check"></i>Need for finer data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#census-data"><i class="fa fa-check"></i>Census Data</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#working-directory-setup"><i class="fa fa-check"></i>Working Directory Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-libraries"><i class="fa fa-check"></i>Load Libraries</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-data"><i class="fa fa-check"></i>Load Data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#view-data"><i class="fa fa-check"></i>View Data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#subset-data"><i class="fa fa-check"></i>Subset Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#merge-data-to-master"><i class="fa fa-check"></i>Merge data to Master</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#mapping-in-r"><i class="fa fa-check"></i>Mapping in R</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-packages"><i class="fa fa-check"></i>Load packages</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#view-palette-options"><i class="fa fa-check"></i>View palette options</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#basic-tmap-functions"><i class="fa fa-check"></i>Basic tmap functions</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#set-color-palette"><i class="fa fa-check"></i>Set color palette</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#classify-data"><i class="fa fa-check"></i>Classify data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#customize-maps"><i class="fa fa-check"></i>Customize Maps</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#facet-mapping"><i class="fa fa-check"></i>Facet mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#using-a-census-api"><i class="fa fa-check"></i>Using a Census API</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#workspace-setup"><i class="fa fa-check"></i>Workspace Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-libraries-1"><i class="fa fa-check"></i>Load libraries</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#activate-your-api-key"><i class="fa fa-check"></i>Activate your API key</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#extract-census-data"><i class="fa fa-check"></i>Extract Census data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#access-census-estimates"><i class="fa fa-check"></i>Access census estimates</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#access-merged-spatial-file"><i class="fa fa-check"></i>Access merged spatial file</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#plot-data"><i class="fa fa-check"></i>Plot data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#rinse-and-repeat"><i class="fa fa-check"></i>Rinse and Repeat</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#scale-of-coal-mining"><i class="fa fa-check"></i>Scale of Coal Mining</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#extract-data"><i class="fa fa-check"></i>Extract Data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#map-data"><i class="fa fa-check"></i>Map Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#appendix"><i class="fa fa-check"></i>Appendix</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#write-to-csv"><i class="fa fa-check"></i>Write to CSV</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#write-to-shp"><i class="fa fa-check"></i>Write to SHP</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#census-data-access"><i class="fa fa-check"></i>Census Data Access</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html"><i class="fa fa-check"></i>Lab 5. Modeling Neighborhoods</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#overview-4"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#research-question-4"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#environment-setup-4"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#clean-wrangle-data"><i class="fa fa-check"></i>Clean &amp; Wrangle Data</a><ul>
+<li><a href="lab-5-modeling-neighborhoods.html#load-csv-with-fread">Load CSV with <code>fread</code></a></li>
+<li><a href="lab-5-modeling-neighborhoods.html#identify-unique-code">Identify <code>unique</code> Code</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#subset-data-1"><i class="fa fa-check"></i>Subset Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#inspect-data-1"><i class="fa fa-check"></i>Inspect Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#save-cleaned-data"><i class="fa fa-check"></i>Save Cleaned Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#convert-csv-to-points"><i class="fa fa-check"></i>Convert CSV to Points</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#identify-xy-locations"><i class="fa fa-check"></i>Identify X,Y locations</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#check-longlat-structure"><i class="fa fa-check"></i>Check long/lat structure</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#id-missing-data"><i class="fa fa-check"></i>ID Missing Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#remove-na-values"><i class="fa fa-check"></i>Remove NA values</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#convert-inspect"><i class="fa fa-check"></i>Convert &amp; Inspect</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#save-clean-data"><i class="fa fa-check"></i>Save Clean Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#rinse-and-repeat-1"><i class="fa fa-check"></i>Rinse and Repeat</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#standardize-crs"><i class="fa fa-check"></i>Standardize CRS</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#load-inspect"><i class="fa fa-check"></i>Load &amp; Inspect</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#overlay-points-polygons"><i class="fa fa-check"></i>Overlay Points &amp; Polygons</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#check-crs"><i class="fa fa-check"></i>Check CRS</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#transform-crs"><i class="fa fa-check"></i>Transform CRS</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#point-in-polygon"><i class="fa fa-check"></i>Point-in-Polygon</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#spatial-join"><i class="fa fa-check"></i>Spatial Join</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#count-crimes-per-tract"><i class="fa fa-check"></i>Count Crimes per Tract</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#rename-column-names"><i class="fa fa-check"></i>Rename Column Names</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#merge-data-2"><i class="fa fa-check"></i>Merge Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#conclusions"><i class="fa fa-check"></i>Conclusions</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#visualize-ouput"><i class="fa fa-check"></i>Visualize Ouput</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#save-your-shapefile"><i class="fa fa-check"></i>Save your Shapefile</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#interpretations"><i class="fa fa-check"></i>Interpretations</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#compare-across-cities"><i class="fa fa-check"></i>Compare Across Cities</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html"><i class="fa fa-check"></i>Lab 7. ESDA &amp; Web Mapping</a><ul>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#overview-5"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#research-question-5"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#environment-setup-5"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#data"><i class="fa fa-check"></i>Data</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-1-food-market-map"><i class="fa fa-check"></i>Section 1: Food Market Map</a><ul>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#start-mapping"><i class="fa fa-check"></i>Start Mapping</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#data-cleaning"><i class="fa fa-check"></i>Data Cleaning</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#pop-up-configuration"><i class="fa fa-check"></i>Pop-up Configuration</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#add-community-areas"><i class="fa fa-check"></i>Add Community Areas</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-1-questions"><i class="fa fa-check"></i>Section 1 Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-2.-adding-context"><i class="fa fa-check"></i>Section 2. Adding Context</a><ul>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-2-questions"><i class="fa fa-check"></i>Section 2 Questions</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lab-7.-esda-web-mapping" class="section level1">
+<h1>Lab 7. ESDA &amp; Web Mapping</h1>
+<div id="overview-5" class="section level2">
+<h2>Overview</h2>
+<p>In this practical, we will explore the basics of food accessibility using supermarket data in Chicago using a web map in ArcGIS Online. You will plot supermarkets in Chicago in 2014, overlaying community areas and relevant socioeconomic data. Markets that are listed as new will be coded properly and visualized as such to facilitate an exploration of where new supermarkets were placed in Chicago.</p>
+</div>
+<div id="research-question-5" class="section level2">
+<h2>Research Question</h2>
+</div>
+<div id="environment-setup-5" class="section level2">
+<h2>Environment Setup</h2>
+<p>To set up for this lab, download the zip file of data from the class website (2014 Supermarket point shapefile, Community Area polygon shapefile). Open, unzip, and explore the data using GeoDa or some other local software to familiarize yourself with the data and its properties.</p>
+<p>Next, <a href="https://www.esri.com/en-us/arcgis/products/create-account">register</a> for a public account of ArcGIS online.</p>
+<p>ArcGIS Online is a cloud-based mapping and analysis solution. Use it to make maps, analyze data, and to share and collaborate. Get access to workflow-specific apps, maps and data from around the globe, and tools for being mobile in the field. Your data and maps are stored in a secure and private infrastructure and can be configured to meet your mapping and IT requirements. <a href="https://doc.arcgis.com/en/arcgis-online/get-started/what-is-agol.htm">[ref]</a></p>
+<p>We will use ArcGIS Online to make a webmap of the supermarket data and related information.</p>
+</div>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>The data comes from a study by Kolak et al (2018), “<a href="https://www.sciencedirect.com/science/article/abs/pii/S1353829217302009">Urban foodscape trends: Disparities in healthy food access in Chicago, 2007–2014.</a>” Most of data from the study is available in <a href="https://www.sciencedirect.com/science/article/pii/S2352340918314070">Data in Brief</a>, though we will use a slightly rawer format of the 2014 supermarket file. The file includes markets marked as “new” as well as “confirmed.” New markets were new as compared to the 2011 file; they could be actual new locations or simply new to the researchers, so care must be taken in using this data. (In other words, this is a rough and exploratory, not validated and confirmatory, lab dataset!) Confirmed locations were independent stores that were checked on by researchers at the time of data collection to confirm supermarket status.</p>
+</div>
+<div id="section-1-food-market-map" class="section level2">
+<h2>Section 1: Food Market Map</h2>
+<div id="start-mapping" class="section level3">
+<h3>Start Mapping</h3>
+<p>Once you are signed in to ArcGIS online, you’ll make a new map. <br /><br />
+Click on “Map” in the main tab:<br /><br />
+<img src="7-1.png" width="504" /></p>
+<p>This will take you to a new Map:<br /><br />
+<img src="7-2.png" width="506" /></p>
+<p>Click on the “Add+” button at the top of the left toolbar. Click on Add the .zip folder of the supermarkets. (You can keep the original features when prompted.) <br /><br />
+ArcGIS Online automatically searches for the most optimal way to display the data. In this case, it’s picked up the “Category” column and is visualizing new, confirmed, and “other” markets.<br /><br />
+<img src="7-3.png" width="321" /></p>
+<p>We will take this option for now. Click “Done” to complete import. <br /><br />
+Next, under “Supermarkets 2014” in the Content section, click on the Table icon. <br /><br />
+<img src="7-4.png" width="332" /></p>
+<p>The attribute table appears below the map. Click “Save,” giving your map a name and tag.</p>
+</div>
+<div id="data-cleaning" class="section level3">
+<h3>Data Cleaning</h3>
+<p>Click on the “Category” heading in the table to get an option for sorting. Choose Ascending. <br /><br />
+<img src="7-5.png" width="623" /></p>
+<p>Inspect the data. <br /><br />
+You will see that several fields that show “new” in other columns are not indicated as “new” in this category. We will do some light data cleaning. <br /><br />
+Sort “Field3” and search for the OPEN_NEWLOCATION data. Type in “new” in the Category field for all of these that do not otherwise have “new” listed.<br /></p>
+<p><img src="7-6.png" width="626" /></p>
+<p>Search through remaining fields in the dataset, adding any other “new” stores to the Category. <br /><br />
+Should you zoom to another part of the map by accident, you can always click on the additional options by SuperMarkets 2014 in Contents, and select “Zoom to” to recenter:<br /></p>
+<p><img src="7-7.png" width="238" /></p>
+<p>Click Save. <br /></p>
+</div>
+<div id="pop-up-configuration" class="section level3">
+<h3>Pop-up Configuration</h3>
+<p>Next we will configure the pop-up window so we present the best information every time a market is clicked. Click on additional options (three dots icon) of Supermarkets 2014, and select “Configure Pop-Up.” Once in the pop-up configuration screen, select “Configure Attributes.” <br /><br />
+We will de-select all fields to display except Field 4 and Field 5. <br /><br />
+We will type in the Field 5 alias as “Name,” and Field 4 alias as “Address.” Click OK. <br /></p>
+<p><img src="7-8.png" width="477" /></p>
+<p>Then, move Field 5 before Field 4 in the Pop-Up Contents window, so that the store name is before the address in the pop-up. Click OK. <br /><br />
+<img src="7-9.png" width="290" /></p>
+<p>Click on a market in the map to ensure the pop-up is working correctly. If not, resolve. <br /><br />
+<img src="7-10.png" width="352" /></p>
+</div>
+<div id="add-community-areas" class="section level3">
+<h3>Add Community Areas</h3>
+<p>Next, import the Community Areas shapefile as a new layer. Select the “Location” option for display drawing style. Click OK. <br /><br />
+<img src="7-11.png" width="163" /></p>
+<p>In the Content window, drag “Community Areas” under Supermarkets so the overlay properly. <br /><br />
+<img src="7-12.png" width="307" /></p>
+<p>Click Save. <br /><br />
+Next, click on the icon showing shapes under your new layer; this will allow you styling options. <br /><br />
+Click on the “Options” button, and then click on “Symbols.” <br /><br />
+<img src="7-13.png" width="276" /></p>
+<p>Change the fill to transparent (a white square button with a red line crossing). <br /><br />
+Change the outline to a dark gray color, with a thicker line (you’ll need to unclick “Adjust outline automatically”). Click OK. <br /><br />
+<img src="7-14.png" width="455" /></p>
+<p>Click Done. Save. <br /><br />
+Next, we’ll create labels. Click the “Other Options” icon next to the Community Area, and select “Create Labels.” Select “Community” as the attribute that has the area name. Adjust the size, and make the visible range so that the labels only appear when zooming in to Chicago. Explore your options! Click OK. <br /><br />
+<img src="7-15.png" width="278" /></p>
+<p>Save. <br /></p>
+</div>
+<div id="section-1-questions" class="section level3">
+<h3>Section 1 Questions</h3>
+<ol style="list-style-type: decimal">
+<li>Explore the map you made. What is the distribution of supermarkets overall in Chicago? Describe the spatial pattern.</li>
+<li>What is the distribution of new supermarkets in Chicago? What community areas have the most new markets? Describe the spatial pattern.</li>
+<li>Discuss or interpret your findings overall. What hypothesis might emerge as a driving force behind the spatial patterns observed?</li>
+</ol>
+</div>
+</div>
+<div id="section-2.-adding-context" class="section level2">
+<h2>Section 2. Adding Context</h2>
+<p>Next, we’ll add some additional data to the map to provide context and further explore the foodscape and interrogate our emerging hypothesis. <br /><br />
+Click “Add+” and select “Browse Living Atlas Layers.” Search for the variable, “Poverty” and select the first option, “USA Poverty Ratio.” What does this ratio represent? Read about it in the options window before importing to ensure you understand what you are loading. <br /><br />
+<img src="7-16.png" width="499" /></p>
+<p>Add to Map, and the adjust the Transparency to make it a little less imposing: <br /><br />
+<img src="7-17.png" width="295" /></p>
+<p>You may need to reduce the transparency of Community Area layer outline to ensure it’s plotting in an aesthetically appealing way. You may also want to remove the Community Area pop-up. <br /><br />
+Next, change the color of the New/Confirmed/Other supermarkets to plot in a more pleasing way with the poverty ratio map. I chose a dark purple for new stores, and dark gray for regular. If you can’t find the “Change Style” selection option, explore the icons or investigate further until finding! <br /><br />
+<img src="7-18.png" width="257" /></p>
+<p>Save. <br /><br />
+Next, add another piece of data. You can either import another Living Atlas layer from ArcGIS Online, or some of your own data. For example, you can merge other Community Area data from the Chicago Data Portal, and reload your community area file. Save. <br /><br />
+Final, share your map. Zoom to the desired configuration. Click on “Share,” enable public sharing, and save your link. <br /></p>
+<div id="section-2-questions" class="section level3">
+<h3>Section 2 Questions</h3>
+<ol start="4" style="list-style-type: decimal">
+<li>What spatial patterns and distributions emerged when adding the poverty ratio map? How did your hypothesis get further refined, or change?</li>
+<li>What new data source did you add, and why? How did your hypothesis get further refined, or change?</li>
+<li><strong>Post to the Lab 7 Discussion board the following</strong>: a link to your final map, and short description of the patterns uncovered and your final hypothesis that was developed through this exercise.</li>
+</ol>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lab-5-modeling-neighborhoods.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
