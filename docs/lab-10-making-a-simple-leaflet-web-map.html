@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lab-9-.html"/>
+
+<script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Intro</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#author-m.-kolak-center-for-spatial-data-science"><i class="fa fa-check"></i>Author: M. Kolak, Center for Spatial Data Science</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#co-author-h.i.-park-univeristy-of-chicago"><i class="fa fa-check"></i>Co-author: H.I. Park, Univeristy of Chicago</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html"><i class="fa fa-check"></i>Lab 1. Intro to Spatial Data</a><ul>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#the-bolded-sentences-need-to-be-made-more-general-as-they-are-specific-to-a-particular-version-of-the-software"><i class="fa fa-check"></i>The bolded sentences need to be made more general, as they are specific to a particular version of the software</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#research-question"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#environment-setup"><i class="fa fa-check"></i>Environment Setup</a><ul>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#plugin"><i class="fa fa-check"></i>Plugin</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#basemap"><i class="fa fa-check"></i>Basemap</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#file-management"><i class="fa fa-check"></i>File Management</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#download-data"><i class="fa fa-check"></i>Download Data</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#transform-data"><i class="fa fa-check"></i>Transform Data</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#set-new-project-space"><i class="fa fa-check"></i>Set New Project Space</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#style-layers"><i class="fa fa-check"></i>Style Layers</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#calculate-and-style-buffers"><i class="fa fa-check"></i>Calculate and Style Buffers</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#add-labeled-community-areas"><i class="fa fa-check"></i>Add labeled community areas</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#compose-a-map"><i class="fa fa-check"></i>Compose a Map</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html"><i class="fa fa-check"></i>Lab 2. Principles of Cartographic Design</a><ul>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#overview-1"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#research-question-1"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#environment-setup-1"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#download-data-1"><i class="fa fa-check"></i>Download Data</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#inspect-data"><i class="fa fa-check"></i>Inspect Data</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#open-in-geoda"><i class="fa fa-check"></i>Open in GeoDa</a><ul>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#merge-data"><i class="fa fa-check"></i>Merge data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#data-classification"><i class="fa fa-check"></i>Data Classification</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#choropleth-mapping-in-geoda"><i class="fa fa-check"></i>Choropleth Mapping in GeoDa</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#next-steps"><i class="fa fa-check"></i>Next Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html"><i class="fa fa-check"></i>Lab 3. Principles of Spatial Scale, Part 1</a><ul>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#overview-2"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#research-question-2"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#environment-setup-2"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#download-data-2"><i class="fa fa-check"></i>Download Data</a><ul>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#coal-mining-job-data"><i class="fa fa-check"></i>Coal Mining Job Data</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#county-boundary-file-data"><i class="fa fa-check"></i>County Boundary File Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#merge-data-1"><i class="fa fa-check"></i>Merge Data</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#explore-data"><i class="fa fa-check"></i>Explore Data</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#add-another-time-period"><i class="fa fa-check"></i>Add Another Time Period</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#installations-for-next-week"><i class="fa fa-check"></i>Installations for Next Week</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html"><i class="fa fa-check"></i>Lab 4. Principles of Spatial Scale, Part 2</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#overview-3"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#research-question-3"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#environment-setup-3"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#need-for-finer-data"><i class="fa fa-check"></i>Need for finer data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#census-data"><i class="fa fa-check"></i>Census Data</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#working-directory-setup"><i class="fa fa-check"></i>Working Directory Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-libraries"><i class="fa fa-check"></i>Load Libraries</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-data"><i class="fa fa-check"></i>Load Data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#view-data"><i class="fa fa-check"></i>View Data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#subset-data"><i class="fa fa-check"></i>Subset Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#merge-data-to-master"><i class="fa fa-check"></i>Merge data to Master</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#mapping-in-r"><i class="fa fa-check"></i>Mapping in R</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-packages"><i class="fa fa-check"></i>Load packages</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#view-palette-options"><i class="fa fa-check"></i>View palette options</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#basic-tmap-functions"><i class="fa fa-check"></i>Basic tmap functions</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#set-color-palette"><i class="fa fa-check"></i>Set color palette</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#classify-data"><i class="fa fa-check"></i>Classify data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#customize-maps"><i class="fa fa-check"></i>Customize Maps</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#facet-mapping"><i class="fa fa-check"></i>Facet mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#using-a-census-api"><i class="fa fa-check"></i>Using a Census API</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#workspace-setup"><i class="fa fa-check"></i>Workspace Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-libraries-1"><i class="fa fa-check"></i>Load libraries</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#activate-your-api-key"><i class="fa fa-check"></i>Activate your API key</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#extract-census-data"><i class="fa fa-check"></i>Extract Census data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#access-census-estimates"><i class="fa fa-check"></i>Access census estimates</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#access-merged-spatial-file"><i class="fa fa-check"></i>Access merged spatial file</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#plot-data"><i class="fa fa-check"></i>Plot data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#rinse-and-repeat"><i class="fa fa-check"></i>Rinse and Repeat</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#scale-of-coal-mining"><i class="fa fa-check"></i>Scale of Coal Mining</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#extract-data"><i class="fa fa-check"></i>Extract Data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#map-data"><i class="fa fa-check"></i>Map Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#appendix"><i class="fa fa-check"></i>Appendix</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#write-to-csv"><i class="fa fa-check"></i>Write to CSV</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#write-to-shp"><i class="fa fa-check"></i>Write to SHP</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#census-data-access"><i class="fa fa-check"></i>Census Data Access</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html"><i class="fa fa-check"></i>Lab 5. Modeling Neighborhoods</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#overview-4"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#research-question-4"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#environment-setup-4"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#clean-wrangle-data"><i class="fa fa-check"></i>Clean &amp; Wrangle Data</a><ul>
+<li><a href="lab-5-modeling-neighborhoods.html#load-csv-with-fread">Load CSV with <code>fread</code></a></li>
+<li><a href="lab-5-modeling-neighborhoods.html#identify-unique-code">Identify <code>unique</code> Code</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#subset-data-1"><i class="fa fa-check"></i>Subset Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#inspect-data-1"><i class="fa fa-check"></i>Inspect Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#save-cleaned-data"><i class="fa fa-check"></i>Save Cleaned Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#convert-csv-to-points"><i class="fa fa-check"></i>Convert CSV to Points</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#identify-xy-locations"><i class="fa fa-check"></i>Identify X,Y locations</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#check-longlat-structure"><i class="fa fa-check"></i>Check long/lat structure</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#id-missing-data"><i class="fa fa-check"></i>ID Missing Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#remove-na-values"><i class="fa fa-check"></i>Remove NA values</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#convert-inspect"><i class="fa fa-check"></i>Convert &amp; Inspect</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#save-clean-data"><i class="fa fa-check"></i>Save Clean Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#rinse-and-repeat-1"><i class="fa fa-check"></i>Rinse and Repeat</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#standardize-crs"><i class="fa fa-check"></i>Standardize CRS</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#load-inspect"><i class="fa fa-check"></i>Load &amp; Inspect</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#overlay-points-polygons"><i class="fa fa-check"></i>Overlay Points &amp; Polygons</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#check-crs"><i class="fa fa-check"></i>Check CRS</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#transform-crs"><i class="fa fa-check"></i>Transform CRS</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#point-in-polygon"><i class="fa fa-check"></i>Point-in-Polygon</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#spatial-join"><i class="fa fa-check"></i>Spatial Join</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#count-crimes-per-tract"><i class="fa fa-check"></i>Count Crimes per Tract</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#rename-column-names"><i class="fa fa-check"></i>Rename Column Names</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#merge-data-2"><i class="fa fa-check"></i>Merge Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#conclusions"><i class="fa fa-check"></i>Conclusions</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#visualize-ouput"><i class="fa fa-check"></i>Visualize Ouput</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#save-your-shapefile"><i class="fa fa-check"></i>Save your Shapefile</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#interpretations"><i class="fa fa-check"></i>Interpretations</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#compare-across-cities"><i class="fa fa-check"></i>Compare Across Cities</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html"><i class="fa fa-check"></i>Lab 6. StoryTelling Maps</a><ul>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#overview-5"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#defining-storytelling-maps"><i class="fa fa-check"></i>Defining Storytelling Maps</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#research-question-5"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#environment-setup-5"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#start-mapping"><i class="fa fa-check"></i>Start Mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html"><i class="fa fa-check"></i>Lab 7. ESDA &amp; Web Mapping</a><ul>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#overview-6"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#research-question-6"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#environment-setup-6"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#data"><i class="fa fa-check"></i>Data</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-1-food-market-map"><i class="fa fa-check"></i>Section 1: Food Market Map</a><ul>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#start-mapping-1"><i class="fa fa-check"></i>Start Mapping</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#data-cleaning"><i class="fa fa-check"></i>Data Cleaning</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#pop-up-configuration"><i class="fa fa-check"></i>Pop-up Configuration</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#add-community-areas"><i class="fa fa-check"></i>Add Community Areas</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-1-questions"><i class="fa fa-check"></i>Section 1 Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-2.-adding-context"><i class="fa fa-check"></i>Section 2. Adding Context</a><ul>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-2-questions"><i class="fa fa-check"></i>Section 2 Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html"><i class="fa fa-check"></i>Lab 8. Points to Predictions</a><ul>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#overview-7"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#research-question-7"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#environment-setup-7"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#load-and-join-data"><i class="fa fa-check"></i>Load and Join Data</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#inspect-and-prepare-data"><i class="fa fa-check"></i>Inspect and Prepare Data</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-basic-visualizations"><i class="fa fa-check"></i>Point Data Method: Basic Visualizations</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-graduate-symbol-visualizations"><i class="fa fa-check"></i>Point Data Method: Graduate Symbol Visualizations</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-buffer-generation"><i class="fa fa-check"></i>Point Data Method: Buffer Generation</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-buffer-count-per-area"><i class="fa fa-check"></i>Point Data Method: Buffer Count per Area</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-buffer-union-or-dissolve"><i class="fa fa-check"></i>Point Data Method: Buffer Union (or Dissolve)</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-group-attribute-by-area"><i class="fa fa-check"></i>Point Data Method: Group Attribute by Area</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-group-by-grid"><i class="fa fa-check"></i>Point Data Method: Group by Grid</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-kernel-density-surface"><i class="fa fa-check"></i>Point Data Method: Kernel Density Surface</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-9-.html"><a href="lab-9-.html"><i class="fa fa-check"></i>Lab 9.</a><ul>
+<li class="chapter" data-level="" data-path="lab-9-.html"><a href="lab-9-.html#overview-8"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-9-.html"><a href="lab-9-.html#research-question-8"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-9-.html"><a href="lab-9-.html#environment-setup-8"><i class="fa fa-check"></i>Environment Setup</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html"><i class="fa fa-check"></i>Lab 10. Making a Simple Leaflet Web Map</a><ul>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#chicago-rat-map-2010"><i class="fa fa-check"></i>Chicago Rat Map (2010)</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#research-question-9"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#environment-setup-9"><i class="fa fa-check"></i>Environment Setup</a><ul>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#set-up-a-chrome-server"><i class="fa fa-check"></i>Set up a Chrome Server</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#build-html"><i class="fa fa-check"></i>Build html</a><ul>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#create-new-html-file"><i class="fa fa-check"></i>Create new html file</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#add-html-skeleton"><i class="fa fa-check"></i>Add HTML Skeleton</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#add-a-title"><i class="fa fa-check"></i>Add a Title</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#link-leaflet-and-javascript"><i class="fa fa-check"></i>Link Leaflet and Javascript</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#generate-a-basic-map-style"><i class="fa fa-check"></i>Generate a Basic Map Style</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#identify-in-a-new-div"><i class="fa fa-check"></i>Identify in a new div</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#generate-new-leaflet-script"><i class="fa fa-check"></i>Generate new Leaflet script</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#initialize-map"><i class="fa fa-check"></i>Initialize Map</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#load-and-add-tile-layer"><i class="fa fa-check"></i>Load and add tile layer</a></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#finalize-map"><i class="fa fa-check"></i>Finalize Map</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#challenge"><i class="fa fa-check"></i>Challenge</a><ul>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#update-stylesheet"><i class="fa fa-check"></i>Update Stylesheet</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#resources"><i class="fa fa-check"></i>Resources</a><ul>
+<li class="chapter" data-level="" data-path="lab-10-making-a-simple-leaflet-web-map.html"><a href="lab-10-making-a-simple-leaflet-web-map.html#additional-tutorials"><i class="fa fa-check"></i>Additional tutorials:</a></li>
+</ul></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lab-10.-making-a-simple-leaflet-web-map" class="section level1">
+<h1>Lab 10. Making a Simple Leaflet Web Map</h1>
+<p><em>Sources: Leaflet Demo Documentation; MapTime Boston</em> ## Overview</p>
+<div id="chicago-rat-map-2010" class="section level3">
+<h3>Chicago Rat Map (2010)</h3>
+<p>A map of 311 rodent complaints for the City of Chicago in 2010. <br /></p>
+<p><img src="10-1.png" width="622" /></p>
+</div>
+<div id="research-question-9" class="section level2">
+<h2>Research Question</h2>
+</div>
+<div id="environment-setup-9" class="section level2">
+<h2>Environment Setup</h2>
+<p>The data used for this tutorial is from the City of Chicago Data Portal. <a href="https://data.cityofchicago.org/Service-Requests/311-Service-Requests/v6vf-nfxy">311 Service Request Data</a> was filtered to only include rodent complaints in 2010, and exported as a CSV file. The CSV file was then imported to GeoDa, converted to a spatial data format by enabling the lat/long coordinates, and exported as a geojson file.</p>
+<div id="set-up-a-chrome-server" class="section level3">
+<h3>Set up a Chrome Server</h3>
+<p>As a new step in this tutorial, we will set up a Chrome Web Server. Doing web development work sometimes required many additional steps for debugging and viewing our dev in process. For this lab we’ll use Chrome as our web browser. Download and install if you do not have Chrome. Next, install the add on, <a href="https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb?hl=en">Web Server for Chrome</a>. <br /><br />
+Next, unzip the folder from class to your system. <br /><br />
+Next we’ll start our Web Server. Go to the Chrome extension and Launch App. <img src="10-2.png" width="626" /></p>
+<p>Choose the folder that holds your information, and start the server. <br /><br />
+<img src="10-3.png" width="324" /></p>
+<p>Next, click on the Web Server URL. This will be your testing environment. <br /><br />
+<img src="10-4.png" width="500" /></p>
+<p>Click on LeafletDemo.html to confirm your testing environment works. It should open up a web page with Dancing Rats! Now you’re ready to start coding. <br /><br />
+<img src="10-5.png" width="492" /></p>
+</div>
+</div>
+<div id="build-html" class="section level2">
+<h2>Build html</h2>
+<div id="create-new-html-file" class="section level3">
+<h3>Create new html file</h3>
+<p>Open a text editor program. On a PC, try using “Notepad.” On a Mac, “TextEditor” will work. If you’re interested in learning how to code for the long-term, it’s recommended that you download a more sophisticated text editor program like “Sublime” for easier coding. <br /><br />
+Generate a new document, saved within the folder of your materials for class. Save as “RatMap.html” – then, drag and drop the file into the folder you generated. View in the web environment you generated in Step 0. The file should open as a .html extension, but will be empty. <br /></p>
+</div>
+<div id="add-html-skeleton" class="section level3">
+<h3>Add HTML Skeleton</h3>
+<p>An html file will begin and end with an &lt;html&gt; call, and have a &lt;head&gt; and &lt;body&gt; section. In your new document, currently an empty html file, input and save the following: <br /></p>
+<p><img src="html_1.png" width="196" /></p>
+</div>
+<div id="add-a-title" class="section level3">
+<h3>Add a Title</h3>
+<p>In the &lt;head&gt; section, add a title. Input and save the following: <br /><br />
+<img src="html_2.png" width="336" /></p>
+<p>Open your html file in a web browser. Because some web browsers limit features added in development stages (like <em>Chrome</em> in default settings), a more flexible browser like <em>Firefox</em> is recommended. The title added does not appear on the web page, but instead serves as metadata for the web page itself. <br /><br />
+To add a title as a heading on your web map, you will use the first level heading for html text, or &lt;h1&gt;. Another line uses paragraph font &lt;p&gt; to provide more information. Input, update, and save the following. Confirm that your header appears when loading. <br /><br />
+<img src="html_3.png" width="563" /></p>
+</div>
+<div id="link-leaflet-and-javascript" class="section level3">
+<h3>Link Leaflet and Javascript</h3>
+<p>Next, we’ll add an existing style sheet and map functionality by adding Leaflet libraries. These libraries are loaded dynamically using web addresses provided. The stylesheet is loaded as a CSS library, and linked as a “stylesheet.” The javascript library is loaded using a script address. <br /></p>
+<p><img src="html_4.png" width="583" /></p>
+<p>Input, update, and save.</p>
+</div>
+<div id="generate-a-basic-map-style" class="section level3">
+<h3>Generate a Basic Map Style</h3>
+<p>Next, we generate a basic map style by specifying the height and width of the map we’ll be adding. Size is measures as pixels. Specify the map width to be 900 pixels wide and height to be 500 pixels. The style function used is #map{}, which can be found in the Leaflet documentation. <br /></p>
+<p><img src="html_5.png" width="589" /></p>
+<p>Input, update, and save.</p>
+</div>
+<div id="identify-in-a-new-div" class="section level3">
+<h3>Identify in a new div</h3>
+<p>We’re done with the head of our html! We next move on to the body, where we’ll start adding our map. First, we create a &lt;div&gt; for the map object that will be generated. An HTML &lt;div&gt; element is a generic container for flow content. The div call for “map” will start our map script. <br /><br />
+<img src="html_6.png" width="585" /></p>
+</div>
+<div id="generate-new-leaflet-script" class="section level3">
+<h3>Generate new Leaflet script</h3>
+<p>Next, we generate a new section for the map script. This is made with the opening and closing of &lt;script&gt; &lt;/script&gt;, creating a new section that will include our Leaflet mapping script. <br /><br />
+<img src="html_7.png" width="567" /></p>
+<p>Input, update, and save.</p>
+</div>
+<div id="initialize-map" class="section level3">
+<h3>Initialize Map</h3>
+<p>We now generate a new variable called “map.” This “map” variable should match the div id assigned in step 6. We use the leaflet mapping function L.map() to initialize the map. The setView parameter should be set to the corresponding latitude and longitude for the center of your map. A parameter indicating the initial zoom degree is also set; here, 13 zooms in to reasonably visualize the Chicago area. <br /><br />
+<img src="html_8.png" width="591" /></p>
+</div>
+<div id="load-and-add-tile-layer" class="section level3">
+<h3>Load and add tile layer</h3>
+<p>Next, we’ll add a basemap layer. There are multiple tiles to choose from; see the Resources section at the end of this tutorial for additional options. We’ll use a light gray base map directly from the ESRI service. Additional services from Open Street Map, Stamen, and Carto are recommended. Note: if a different tile doesn’t work, their server may be down or changed. <br /><br />
+<img src="html_9.png" width="675" /></p>
+</div>
+<div id="finalize-map" class="section level3">
+<h3>Finalize Map</h3>
+<p>In the final step, we add our data, saved as a geojson file. First, add a jquery script to the head section to enable data processing functionality. Next, make sure your data be located in the same folder (ie. working directory) of your html file. The function $.getJSON gets the file and initializes it as “data,” and then L.geoJson(data) calls and adds the file to the Leaflet map. <br /><br />
+<img src="html_10.png" width="650" /></p>
+</div>
+</div>
+<div id="challenge" class="section level2">
+<h2>Challenge</h2>
+<div id="update-stylesheet" class="section level3">
+<h3>Update Stylesheet</h3>
+<p>The default text for our map is not very aesthetically pleasing. You can add a Bootstrap template theme to update the text into a modern font. Add the following as a new line in the stylesheet section of your head: <br /></p>
+<p>&lt;link rel=“stylesheet” href=“<a href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" class="uri">https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css</a>” integrity=“sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u” crossorigin=“anonymous”&gt; <br /><br />
+Next, try maximizing the map size by swapping width and height info with “height: 100%”. ### Custom Point Marker The default markers for points are blue icons. You can add custom icons to make your map more unique. Swap out your marker/point code with the following for a dynamic map of dancing rats – just make sure that the “rat.gif” file is located in your working directory: <br /><br />
+<img src="html_11.png" width="367" /></p>
+<p><img src="10-6.png" width="354" /></p>
+</div>
+</div>
+<div id="resources" class="section level2">
+<h2>Resources</h2>
+<div id="additional-tutorials" class="section level3">
+<h3>Additional tutorials:</h3>
+<ul>
+<li>More rats and choropleth mapping: <a href="https://maptimeboston.github.io/leaflet-intro/" class="uri">https://maptimeboston.github.io/leaflet-intro/</a></li>
+<li>Leaflet basic tutorials documentation: <a href="https://leafletjs.com/examples.html" class="uri">https://leafletjs.com/examples.html</a> Additional leaflet basemap tiles to choose from here: <a href="http://leaflet-extras.github.io/leaflet-providers/preview/" class="uri">http://leaflet-extras.github.io/leaflet-providers/preview/</a></li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lab-9-.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

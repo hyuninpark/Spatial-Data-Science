@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.19 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="" />
+  
+  
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="lab-7-esda-web-mapping.html"/>
+
+<script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
+<link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="book_assets/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Intro</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html"><i class="fa fa-check"></i>Lab 1. Intro to Spatial Data</a><ul>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#the-bolded-sentences-need-to-be-made-more-general-as-they-are-specific-to-a-particular-version-of-the-software"><i class="fa fa-check"></i>The bolded sentences need to be made more general, as they are specific to a particular version of the software</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#overview"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#research-question"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#environment-setup"><i class="fa fa-check"></i>Environment Setup</a><ul>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#plugin"><i class="fa fa-check"></i>Plugin</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#basemap"><i class="fa fa-check"></i>Basemap</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#file-management"><i class="fa fa-check"></i>File Management</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#download-data"><i class="fa fa-check"></i>Download Data</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#transform-data"><i class="fa fa-check"></i>Transform Data</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#set-new-project-space"><i class="fa fa-check"></i>Set New Project Space</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#style-layers"><i class="fa fa-check"></i>Style Layers</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#calculate-and-style-buffers"><i class="fa fa-check"></i>Calculate and Style Buffers</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#add-labeled-community-areas"><i class="fa fa-check"></i>Add labeled community areas</a></li>
+<li class="chapter" data-level="" data-path="lab-1-intro-to-spatial-data.html"><a href="lab-1-intro-to-spatial-data.html#compose-a-map"><i class="fa fa-check"></i>Compose a Map</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html"><i class="fa fa-check"></i>Lab 2. Principles of Cartographic Design</a><ul>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#overview-1"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#research-question-1"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#environment-setup-1"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#download-data-1"><i class="fa fa-check"></i>Download Data</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#inspect-data"><i class="fa fa-check"></i>Inspect Data</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#open-in-geoda"><i class="fa fa-check"></i>Open in GeoDa</a><ul>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#merge-data"><i class="fa fa-check"></i>Merge data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#data-classification"><i class="fa fa-check"></i>Data Classification</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#choropleth-mapping-in-geoda"><i class="fa fa-check"></i>Choropleth Mapping in GeoDa</a></li>
+<li class="chapter" data-level="" data-path="lab-2-principles-of-cartographic-design.html"><a href="lab-2-principles-of-cartographic-design.html#next-steps"><i class="fa fa-check"></i>Next Steps</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html"><i class="fa fa-check"></i>Lab 3. Principles of Spatial Scale, Part 1</a><ul>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#overview-2"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#research-question-2"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#environment-setup-2"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#download-data-2"><i class="fa fa-check"></i>Download Data</a><ul>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#coal-mining-job-data"><i class="fa fa-check"></i>Coal Mining Job Data</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#county-boundary-file-data"><i class="fa fa-check"></i>County Boundary File Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#merge-data-1"><i class="fa fa-check"></i>Merge Data</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#explore-data"><i class="fa fa-check"></i>Explore Data</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#add-another-time-period"><i class="fa fa-check"></i>Add Another Time Period</a></li>
+<li class="chapter" data-level="" data-path="lab-3-principles-of-spatial-scale-part-1.html"><a href="lab-3-principles-of-spatial-scale-part-1.html#installations-for-next-week"><i class="fa fa-check"></i>Installations for Next Week</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html"><i class="fa fa-check"></i>Lab 4. Principles of Spatial Scale, Part 2</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#overview-3"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#research-question-3"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#environment-setup-3"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#need-for-finer-data"><i class="fa fa-check"></i>Need for finer data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#census-data"><i class="fa fa-check"></i>Census Data</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#working-directory-setup"><i class="fa fa-check"></i>Working Directory Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-libraries"><i class="fa fa-check"></i>Load Libraries</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-data"><i class="fa fa-check"></i>Load Data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#view-data"><i class="fa fa-check"></i>View Data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#subset-data"><i class="fa fa-check"></i>Subset Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#merge-data-to-master"><i class="fa fa-check"></i>Merge data to Master</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#mapping-in-r"><i class="fa fa-check"></i>Mapping in R</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-packages"><i class="fa fa-check"></i>Load packages</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#view-palette-options"><i class="fa fa-check"></i>View palette options</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#basic-tmap-functions"><i class="fa fa-check"></i>Basic tmap functions</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#set-color-palette"><i class="fa fa-check"></i>Set color palette</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#classify-data"><i class="fa fa-check"></i>Classify data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#customize-maps"><i class="fa fa-check"></i>Customize Maps</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#facet-mapping"><i class="fa fa-check"></i>Facet mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#using-a-census-api"><i class="fa fa-check"></i>Using a Census API</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#workspace-setup"><i class="fa fa-check"></i>Workspace Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#load-libraries-1"><i class="fa fa-check"></i>Load libraries</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#activate-your-api-key"><i class="fa fa-check"></i>Activate your API key</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#extract-census-data"><i class="fa fa-check"></i>Extract Census data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#access-census-estimates"><i class="fa fa-check"></i>Access census estimates</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#access-merged-spatial-file"><i class="fa fa-check"></i>Access merged spatial file</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#plot-data"><i class="fa fa-check"></i>Plot data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#rinse-and-repeat"><i class="fa fa-check"></i>Rinse and Repeat</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#scale-of-coal-mining"><i class="fa fa-check"></i>Scale of Coal Mining</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#extract-data"><i class="fa fa-check"></i>Extract Data</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#map-data"><i class="fa fa-check"></i>Map Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#interpretation"><i class="fa fa-check"></i>Interpretation</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#appendix"><i class="fa fa-check"></i>Appendix</a><ul>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#write-to-csv"><i class="fa fa-check"></i>Write to CSV</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#write-to-shp"><i class="fa fa-check"></i>Write to SHP</a></li>
+<li class="chapter" data-level="" data-path="lab-4-principles-of-spatial-scale-part-2.html"><a href="lab-4-principles-of-spatial-scale-part-2.html#census-data-access"><i class="fa fa-check"></i>Census Data Access</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html"><i class="fa fa-check"></i>Lab 5. Modeling Neighborhoods</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#overview-4"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#research-question-4"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#environment-setup-4"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#clean-wrangle-data"><i class="fa fa-check"></i>Clean &amp; Wrangle Data</a><ul>
+<li><a href="lab-5-modeling-neighborhoods.html#load-csv-with-fread">Load CSV with <code>fread</code></a></li>
+<li><a href="lab-5-modeling-neighborhoods.html#identify-unique-code">Identify <code>unique</code> Code</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#subset-data-1"><i class="fa fa-check"></i>Subset Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#inspect-data-1"><i class="fa fa-check"></i>Inspect Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#save-cleaned-data"><i class="fa fa-check"></i>Save Cleaned Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#convert-csv-to-points"><i class="fa fa-check"></i>Convert CSV to Points</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#identify-xy-locations"><i class="fa fa-check"></i>Identify X,Y locations</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#check-longlat-structure"><i class="fa fa-check"></i>Check long/lat structure</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#id-missing-data"><i class="fa fa-check"></i>ID Missing Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#remove-na-values"><i class="fa fa-check"></i>Remove NA values</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#convert-inspect"><i class="fa fa-check"></i>Convert &amp; Inspect</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#save-clean-data"><i class="fa fa-check"></i>Save Clean Data</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#rinse-and-repeat-1"><i class="fa fa-check"></i>Rinse and Repeat</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#standardize-crs"><i class="fa fa-check"></i>Standardize CRS</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#load-inspect"><i class="fa fa-check"></i>Load &amp; Inspect</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#overlay-points-polygons"><i class="fa fa-check"></i>Overlay Points &amp; Polygons</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#check-crs"><i class="fa fa-check"></i>Check CRS</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#transform-crs"><i class="fa fa-check"></i>Transform CRS</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#point-in-polygon"><i class="fa fa-check"></i>Point-in-Polygon</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#spatial-join"><i class="fa fa-check"></i>Spatial Join</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#count-crimes-per-tract"><i class="fa fa-check"></i>Count Crimes per Tract</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#rename-column-names"><i class="fa fa-check"></i>Rename Column Names</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#merge-data-2"><i class="fa fa-check"></i>Merge Data</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#conclusions"><i class="fa fa-check"></i>Conclusions</a><ul>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#visualize-ouput"><i class="fa fa-check"></i>Visualize Ouput</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#save-your-shapefile"><i class="fa fa-check"></i>Save your Shapefile</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#interpretations"><i class="fa fa-check"></i>Interpretations</a></li>
+<li class="chapter" data-level="" data-path="lab-5-modeling-neighborhoods.html"><a href="lab-5-modeling-neighborhoods.html#compare-across-cities"><i class="fa fa-check"></i>Compare Across Cities</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html"><i class="fa fa-check"></i>Lab 6. StoryTelling Maps</a><ul>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#overview-5"><i class="fa fa-check"></i>Overview</a><ul>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#defining-storytelling-maps"><i class="fa fa-check"></i>Defining Storytelling Maps</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#research-question-5"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#environment-setup-5"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-6-storytelling-maps.html"><a href="lab-6-storytelling-maps.html#start-mapping"><i class="fa fa-check"></i>Start Mapping</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html"><i class="fa fa-check"></i>Lab 7. ESDA &amp; Web Mapping</a><ul>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#overview-6"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#research-question-6"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#environment-setup-6"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#data"><i class="fa fa-check"></i>Data</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-1-food-market-map"><i class="fa fa-check"></i>Section 1: Food Market Map</a><ul>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#start-mapping-1"><i class="fa fa-check"></i>Start Mapping</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#data-cleaning"><i class="fa fa-check"></i>Data Cleaning</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#pop-up-configuration"><i class="fa fa-check"></i>Pop-up Configuration</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#add-community-areas"><i class="fa fa-check"></i>Add Community Areas</a></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-1-questions"><i class="fa fa-check"></i>Section 1 Questions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-2.-adding-context"><i class="fa fa-check"></i>Section 2. Adding Context</a><ul>
+<li class="chapter" data-level="" data-path="lab-7-esda-web-mapping.html"><a href="lab-7-esda-web-mapping.html#section-2-questions"><i class="fa fa-check"></i>Section 2 Questions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html"><i class="fa fa-check"></i>Lab 8. Points to Predictions</a><ul>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#overview-7"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#research-question-7"><i class="fa fa-check"></i>Research Question</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#environment-setup-7"><i class="fa fa-check"></i>Environment Setup</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#load-and-join-data"><i class="fa fa-check"></i>Load and Join Data</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#inspect-and-prepare-data"><i class="fa fa-check"></i>Inspect and Prepare Data</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-basic-visualizations"><i class="fa fa-check"></i>Point Data Method: Basic Visualizations</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-graduate-symbol-visualizations"><i class="fa fa-check"></i>Point Data Method: Graduate Symbol Visualizations</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-buffer-generation"><i class="fa fa-check"></i>Point Data Method: Buffer Generation</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-buffer-count-per-area"><i class="fa fa-check"></i>Point Data Method: Buffer Count per Area</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-buffer-union-or-dissolve"><i class="fa fa-check"></i>Point Data Method: Buffer Union (or Dissolve)</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-group-attribute-by-area"><i class="fa fa-check"></i>Point Data Method: Group Attribute by Area</a></li>
+<li class="chapter" data-level="" data-path="lab-8-points-to-predictions.html"><a href="lab-8-points-to-predictions.html#point-data-method-group-by-grid"><i class="fa fa-check"></i>Point Data Method: Group by Grid</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./"></a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="lab-8.-points-to-predictions" class="section level1">
+<h1>Lab 8. Points to Predictions</h1>
+<div id="overview-7" class="section level2">
+<h2>Overview</h2>
+</div>
+<div id="research-question-7" class="section level2">
+<h2>Research Question</h2>
+</div>
+<div id="environment-setup-7" class="section level2">
+<h2>Environment Setup</h2>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co">#setwd(&quot;~/Desktop/Lab8-CodeData&quot;)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(sf)
+<span class="kw">library</span>(tmap)
+<span class="kw">library</span>(leaflet)
+<span class="kw">library</span>(raster) <span class="co"># Needed for grid and kernel density surface</span>
+<span class="kw">library</span>(adehabitatHR) <span class="co"># Needed for kernel density surface</span></code></pre></div>
+</div>
+<div id="load-and-join-data" class="section level2">
+<h2>Load and Join Data</h2>
+<p>Load non-spatial Data (csv) <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Census.Data &lt;-<span class="kw">read.csv</span>(<span class="st">&quot;practicaldata.csv&quot;</span>)
+<span class="kw">head</span>(Census.Data)</code></pre></div>
+<pre><code>##          OA White_British Low_Occupancy Unemployed Qualification
+## 1 E00004120      42.35669     6.2937063   1.893939      73.62637
+## 2 E00004121      47.20000     5.9322034   2.688172      69.90291
+## 3 E00004122      40.67797     2.9126214   1.212121      67.58242
+## 4 E00004123      49.66216     0.9259259   2.803738      60.77586
+## 5 E00004124      51.13636     2.0000000   3.816794      65.98639
+## 6 E00004125      41.41791     3.9325843   3.846154      74.20635</code></pre>
+<p>Load spatial Data (shapefile) <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Output.Areas &lt;-<span class="st"> </span><span class="kw">st_read</span>(<span class="st">&quot;Camden_oa11.shp&quot;</span>)</code></pre></div>
+<pre><code>## Reading layer `Camden_oa11&#39; from data source `/Users/HIPark/Documents/micrometcalf/Intro2GIS/book/Camden_oa11.shp&#39; using driver `ESRI Shapefile&#39;
+## Simple feature collection with 749 features and 1 field
+## geometry type:  POLYGON
+## dimension:      XY
+## bbox:           xmin: 523954.5 ymin: 180959.8 xmax: 531554.9 ymax: 187603.6
+## CRS:            27700</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(Output.Areas)</code></pre></div>
+<pre><code>## Simple feature collection with 6 features and 1 field
+## geometry type:  POLYGON
+## dimension:      XY
+## bbox:           xmin: 524326 ymin: 181181.1 xmax: 530660.2 ymax: 185111.2
+## CRS:            27700
+##      OA11CD                       geometry
+## 1 E00004527 POLYGON ((530648.4 181230.2...
+## 2 E00004525 POLYGON ((530511.3 181531.2...
+## 3 E00004522 POLYGON ((530207 181434, 53...
+## 4 E00004287 POLYGON ((524355.4 185053.6...
+## 5 E00004206 POLYGON ((528718.5 184565, ...
+## 6 E00004200 POLYGON ((529332.4 181816.6...</code></pre>
+<p>Join our census data to the shapefile <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">OA.Census &lt;-<span class="st"> </span><span class="kw">merge</span>(Output.Areas, Census.Data, <span class="dt">by.x=</span><span class="st">&quot;OA11CD&quot;</span>, <span class="dt">by.y=</span><span class="st">&quot;OA&quot;</span>)
+<span class="kw">head</span>(OA.Census)</code></pre></div>
+<pre><code>## Simple feature collection with 6 features and 5 fields
+## geometry type:  POLYGON
+## dimension:      XY
+## bbox:           xmin: 526848.4 ymin: 184128 xmax: 527537.6 ymax: 185073.1
+## CRS:            27700
+##      OA11CD White_British Low_Occupancy Unemployed Qualification
+## 1 E00004120      42.35669     6.2937063   1.893939      73.62637
+## 2 E00004121      47.20000     5.9322034   2.688172      69.90291
+## 3 E00004122      40.67797     2.9126214   1.212121      67.58242
+## 4 E00004123      49.66216     0.9259259   2.803738      60.77586
+## 5 E00004124      51.13636     2.0000000   3.816794      65.98639
+## 6 E00004125      41.41791     3.9325843   3.846154      74.20635
+##                         geometry
+## 1 POLYGON ((526998.5 184751.6...
+## 2 POLYGON ((527159.1 184538.6...
+## 3 POLYGON ((527260.6 184350.2...
+## 4 POLYGON ((527230.5 184343.3...
+## 5 POLYGON ((527439.8 185011.2...
+## 6 POLYGON ((527427.2 185022.2...</code></pre>
+<p>Load the house prices csv file <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">houses &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;CamdenHouseSales15.csv&quot;</span>)
+<span class="kw">head</span>(houses)</code></pre></div>
+<pre><code>##      UID    Price          Date             Street District         Region
+## 1 597034 22500000  6/12/15 0:00        AVENUE ROAD   CAMDEN GREATER LONDON
+## 2 594622 15200000  11/4/15 0:00  GREENAWAY GARDENS   CAMDEN GREATER LONDON
+## 3 594696 13500000  3/10/15 0:00  TEMPLEWOOD AVENUE   CAMDEN GREATER LONDON
+## 4 594592 10500000  9/14/15 0:00         CHURCH ROW   CAMDEN GREATER LONDON
+## 5 515677  8950000 10/30/15 0:00          THE GROVE   CAMDEN GREATER LONDON
+## 6 592992  8750000   9/1/15 0:00 ST GEORGES TERRACE   CAMDEN GREATER LONDON
+##   Postcode oseast1m osnrth1m
+## 1   NW86HS   527076   183790
+## 2   NW37DJ   525813   185524
+## 3   NW37XA   525779   186084
+## 4   NW36UU   526159   185603
+## 5    N66JU   528177   187307
+## 6   NW18XH   527818   184013</code></pre>
+</div>
+<div id="inspect-and-prepare-data" class="section level2">
+<h2>Inspect and Prepare Data</h2>
+<p>We only need a few columns for this practical <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">houses &lt;-<span class="st"> </span>houses[,<span class="kw">c</span>(<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">8</span>,<span class="dv">9</span>)]
+<span class="kw">head</span>(houses)</code></pre></div>
+<pre><code>##      UID    Price oseast1m osnrth1m
+## 1 597034 22500000   527076   183790
+## 2 594622 15200000   525813   185524
+## 3 594696 13500000   525779   186084
+## 4 594592 10500000   526159   185603
+## 5 515677  8950000   528177   187307
+## 6 592992  8750000   527818   184013</code></pre>
+<p>create a House.Points SpatialPointsDataFrame using coordinates in columns 3 and 4 <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">House.Points &lt;-<span class="st"> </span><span class="kw">st_as_sf</span>(houses, <span class="dt">coords =</span> <span class="kw">c</span>(<span class="st">&quot;oseast1m&quot;</span>,<span class="st">&quot;osnrth1m&quot;</span>), <span class="dt">crs =</span> <span class="dv">27700</span>)</code></pre></div>
+<p>Plot to ensure the points were encoded correctly <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(House.Points)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Check coordinate reference system, transform if needed. <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">st_crs</span>(OA.Census) </code></pre></div>
+<pre><code>## Coordinate Reference System:
+##   User input: 27700 
+##   wkt:
+## PROJCS[&quot;OSGB 1936 / British National Grid&quot;,
+##     GEOGCS[&quot;OSGB 1936&quot;,
+##         DATUM[&quot;OSGB_1936&quot;,
+##             SPHEROID[&quot;Airy 1830&quot;,6377563.396,299.3249646,
+##                 AUTHORITY[&quot;EPSG&quot;,&quot;7001&quot;]],
+##             TOWGS84[446.448,-125.157,542.06,0.15,0.247,0.842,-20.489],
+##             AUTHORITY[&quot;EPSG&quot;,&quot;6277&quot;]],
+##         PRIMEM[&quot;Greenwich&quot;,0,
+##             AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],
+##         UNIT[&quot;degree&quot;,0.0174532925199433,
+##             AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],
+##         AUTHORITY[&quot;EPSG&quot;,&quot;4277&quot;]],
+##     PROJECTION[&quot;Transverse_Mercator&quot;],
+##     PARAMETER[&quot;latitude_of_origin&quot;,49],
+##     PARAMETER[&quot;central_meridian&quot;,-2],
+##     PARAMETER[&quot;scale_factor&quot;,0.9996012717],
+##     PARAMETER[&quot;false_easting&quot;,400000],
+##     PARAMETER[&quot;false_northing&quot;,-100000],
+##     UNIT[&quot;metre&quot;,1,
+##         AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]],
+##     AXIS[&quot;Easting&quot;,EAST],
+##     AXIS[&quot;Northing&quot;,NORTH],
+##     AUTHORITY[&quot;EPSG&quot;,&quot;27700&quot;]]</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">st_crs</span>(House.Points)</code></pre></div>
+<pre><code>## Coordinate Reference System:
+##   User input: EPSG:27700 
+##   wkt:
+## PROJCS[&quot;OSGB 1936 / British National Grid&quot;,
+##     GEOGCS[&quot;OSGB 1936&quot;,
+##         DATUM[&quot;OSGB_1936&quot;,
+##             SPHEROID[&quot;Airy 1830&quot;,6377563.396,299.3249646,
+##                 AUTHORITY[&quot;EPSG&quot;,&quot;7001&quot;]],
+##             TOWGS84[446.448,-125.157,542.06,0.15,0.247,0.842,-20.489],
+##             AUTHORITY[&quot;EPSG&quot;,&quot;6277&quot;]],
+##         PRIMEM[&quot;Greenwich&quot;,0,
+##             AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],
+##         UNIT[&quot;degree&quot;,0.0174532925199433,
+##             AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],
+##         AUTHORITY[&quot;EPSG&quot;,&quot;4277&quot;]],
+##     PROJECTION[&quot;Transverse_Mercator&quot;],
+##     PARAMETER[&quot;latitude_of_origin&quot;,49],
+##     PARAMETER[&quot;central_meridian&quot;,-2],
+##     PARAMETER[&quot;scale_factor&quot;,0.9996012717],
+##     PARAMETER[&quot;false_easting&quot;,400000],
+##     PARAMETER[&quot;false_northing&quot;,-100000],
+##     UNIT[&quot;metre&quot;,1,
+##         AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]],
+##     AXIS[&quot;Easting&quot;,EAST],
+##     AXIS[&quot;Northing&quot;,NORTH],
+##     AUTHORITY[&quot;EPSG&quot;,&quot;27700&quot;]]</code></pre>
+</div>
+<div id="point-data-method-basic-visualizations" class="section level2">
+<h2>Point Data Method: Basic Visualizations</h2>
+<p>This plots a blank base map, we have set the transparency of the borders to 0.4 <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(OA.Census) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">alpha=</span>.<span class="dv">4</span>) </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Creates a color-coded dot map <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(OA.Census) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">alpha=</span>.<span class="dv">4</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(House.Points) <span class="op">+</span><span class="st"> </span><span class="kw">tm_dots</span>(<span class="dt">col =</span> <span class="st">&quot;Price&quot;</span>, <span class="dt">palette =</span> <span class="st">&quot;Reds&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;quantile&quot;</span>) </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>Rescale the points <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(OA.Census) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">alpha=</span>.<span class="dv">4</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(House.Points) <span class="op">+</span><span class="st"> </span><span class="kw">tm_dots</span>(<span class="dt">col =</span> <span class="st">&quot;Price&quot;</span>, <span class="dt">scale =</span> <span class="fl">1.5</span>, <span class="dt">palette =</span> <span class="st">&quot;Reds&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;quantile&quot;</span>, <span class="dt">title =</span> <span class="st">&quot;Price Paid (£)&quot;</span>)  </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>Turn on interactive Leaflet map view <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tmap_mode</span>(<span class="st">&quot;view&quot;</span>)</code></pre></div>
+<pre><code>## tmap mode set to interactive viewing</code></pre>
+<p>View interactive Map; in Export, Save as Web Page <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tmap_mode</span>(<span class="st">&quot;plot&quot;</span>)</code></pre></div>
+<pre><code>## tmap mode set to plotting</code></pre>
+</div>
+<div id="point-data-method-graduate-symbol-visualizations" class="section level2">
+<h2>Point Data Method: Graduate Symbol Visualizations</h2>
+<p>Creates a graduated symbol map <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(OA.Census) <span class="op">+</span><span class="st"> </span><span class="kw">tm_fill</span>(<span class="st">&quot;Unemployed&quot;</span>, <span class="dt">alpha=</span><span class="fl">0.8</span>, <span class="dt">palette =</span> <span class="st">&quot;Greys&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;quantile&quot;</span>, <span class="dt">title =</span> <span class="st">&quot;% Unemployed&quot;</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">tm_borders</span>(<span class="dt">alpha=</span>.<span class="dv">4</span>) <span class="op">+</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">tm_shape</span>(House.Points) <span class="op">+</span><span class="st"> </span><span class="kw">tm_bubbles</span>(<span class="dt">size =</span> <span class="st">&quot;Price&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;Price&quot;</span>, <span class="dt">palette =</span> <span class="st">&quot;PuRd&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;quantile&quot;</span>, <span class="dt">legend.size.show =</span> <span class="ot">FALSE</span>, <span class="dt">title.col =</span> <span class="st">&quot;Price Paid (£)&quot;</span>, <span class="dt">border.col =</span> <span class="st">&quot;black&quot;</span>, <span class="dt">border.lwd =</span> <span class="fl">0.1</span>, <span class="dt">border.alpha =</span> <span class="fl">0.1</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_layout</span>(<span class="dt">legend.text.size =</span> <span class="fl">0.8</span>, <span class="dt">legend.title.size =</span> <span class="fl">1.1</span>, <span class="dt">frame =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+</div>
+<div id="point-data-method-buffer-generation" class="section level2">
+<h2>Point Data Method: Buffer Generation</h2>
+<p>Create 200m buffers for each house point <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">house_buffers &lt;-<span class="st"> </span><span class="kw">st_buffer</span>(House.Points, <span class="dv">200</span>)</code></pre></div>
+<p>Map in tmap <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(OA.Census) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(house_buffers) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(House.Points) <span class="op">+</span><span class="st"> </span><span class="kw">tm_dots</span>(<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>) </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+</div>
+<div id="point-data-method-buffer-count-per-area" class="section level2">
+<h2>Point Data Method: Buffer Count per Area</h2>
+<p>Count buffers within each area; generates a vector of totals <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">count_buffers &lt;-<span class="st"> </span><span class="kw">lengths</span>(<span class="kw">st_within</span>(OA.Census, house_buffers))
+<span class="kw">head</span>(count_buffers)</code></pre></div>
+<pre><code>## [1] 15  2  0  0 18 28</code></pre>
+<p>Stick buffer totals back to the census master file <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">OA.Census &lt;-<span class="st"> </span><span class="kw">cbind</span>(OA.Census,count_buffers)
+<span class="kw">head</span>(OA.Census)</code></pre></div>
+<pre><code>## Simple feature collection with 6 features and 6 fields
+## geometry type:  POLYGON
+## dimension:      XY
+## bbox:           xmin: 526848.4 ymin: 184128 xmax: 527537.6 ymax: 185073.1
+## CRS:            27700
+##      OA11CD White_British Low_Occupancy Unemployed Qualification count_buffers
+## 1 E00004120      42.35669     6.2937063   1.893939      73.62637            15
+## 2 E00004121      47.20000     5.9322034   2.688172      69.90291             2
+## 3 E00004122      40.67797     2.9126214   1.212121      67.58242             0
+## 4 E00004123      49.66216     0.9259259   2.803738      60.77586             0
+## 5 E00004124      51.13636     2.0000000   3.816794      65.98639            18
+## 6 E00004125      41.41791     3.9325843   3.846154      74.20635            28
+##                         geometry
+## 1 POLYGON ((526998.5 184751.6...
+## 2 POLYGON ((527159.1 184538.6...
+## 3 POLYGON ((527260.6 184350.2...
+## 4 POLYGON ((527230.5 184343.3...
+## 5 POLYGON ((527439.8 185011.2...
+## 6 POLYGON ((527427.2 185022.2...</code></pre>
+<p>Map density of buffers per census area <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(OA.Census) <span class="op">+</span><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col =</span> <span class="st">&quot;count_buffers&quot;</span>, <span class="dt">palette =</span> <span class="st">&quot;BuGn&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;quantile&quot;</span>,<span class="dt">title =</span> <span class="st">&quot;Housing Density&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+</div>
+<div id="point-data-method-buffer-union-or-dissolve" class="section level2">
+<h2>Point Data Method: Buffer Union (or Dissolve)</h2>
+<p>Merge the Buffers <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">union.buffers &lt;-<span class="st"> </span><span class="kw">st_union</span>(house_buffers)</code></pre></div>
+<p>Map Housing Buffers <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(OA.Census) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>() <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(union.buffers) <span class="op">+</span><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>, <span class="dt">alpha =</span> .<span class="dv">4</span>) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(House.Points) <span class="op">+</span><span class="st"> </span><span class="kw">tm_dots</span>(<span class="dt">col =</span> <span class="st">&quot;red&quot;</span>) </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+</div>
+<div id="point-data-method-group-attribute-by-area" class="section level2">
+<h2>Point Data Method: Group Attribute by Area</h2>
+<p>Point in polygon. Gives the points the attributes of the polygons that they are in <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">pip &lt;-<span class="st"> </span><span class="kw">st_join</span>(House.Points, OA.Census, <span class="dt">join =</span> st_within)
+<span class="kw">head</span>(pip)</code></pre></div>
+<pre><code>## Simple feature collection with 6 features and 8 fields
+## geometry type:  POINT
+## dimension:      XY
+## bbox:           xmin: 525779 ymin: 183790 xmax: 528177 ymax: 187307
+## CRS:            EPSG:27700
+##      UID    Price    OA11CD White_British Low_Occupancy Unemployed
+## 1 597034 22500000 E00004771      46.77419     0.8547009  1.8264840
+## 2 594622 15200000 E00004357      44.28571     7.6271186  1.3274336
+## 3 594696 13500000 E00004345      48.54369     1.6528926  0.9090909
+## 4 594592 10500000 E00004355      57.08812     5.7377049  1.5789474
+## 5 515677  8950000 E00004495      72.26562     3.9682540  2.0833333
+## 6 592992  8750000 E00004226      60.15625     1.6806723  1.5625000
+##   Qualification count_buffers              geometry
+## 1      50.40650             0 POINT (527076 183790)
+## 2      71.25000             0 POINT (525813 185524)
+## 3      55.10204             0 POINT (525779 186084)
+## 4      55.20362             2 POINT (526159 185603)
+## 5      65.19824             0 POINT (528177 187307)
+## 6      69.71154             0 POINT (527818 184013)</code></pre>
+<p>Aggregate average house prices by the OA11CD (OA names) column <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">OA &lt;-<span class="st"> </span><span class="kw">aggregate</span>(pip<span class="op">$</span>Price, <span class="dt">by =</span> <span class="kw">list</span>(pip<span class="op">$</span>OA11CD), mean)
+<span class="kw">head</span>(OA)</code></pre></div>
+<pre><code>##     Group.1         x
+## 1 E00004120 1260000.0
+## 2 E00004121 1215000.0
+## 3 E00004123 2275000.0
+## 4 E00004124  825859.0
+## 5 E00004125  956333.3
+## 6 E00004126  861428.6</code></pre>
+<p>Change the column names of the aggregated data <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">names</span>(OA) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;OA11CD&quot;</span>, <span class="st">&quot;Price&quot;</span>)</code></pre></div>
+<p>Join the aggregated data back to the OA.Census polygon <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">OA.Census &lt;-<span class="st"> </span><span class="kw">merge</span>(OA.Census, OA, <span class="dt">by =</span> <span class="st">&quot;OA11CD&quot;</span>, <span class="dt">all.x =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<p>Map mean housing price per area <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(OA.Census) <span class="op">+</span><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col =</span> <span class="st">&quot;Price&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;quantile&quot;</span>, <span class="dt">title =</span> <span class="st">&quot;Mean House Price (£)&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+</div>
+<div id="point-data-method-group-by-grid" class="section level2">
+<h2>Point Data Method: Group by Grid</h2>
+<p>Convert sf objects to sp objects for raster and adehabitate packages <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">OA.Census.sp &lt;-<span class="st"> </span>sf<span class="op">:::</span><span class="kw">as_Spatial</span>(OA.Census)
+House.Points.sp &lt;-<span class="st"> </span>sf<span class="op">:::</span><span class="kw">as_Spatial</span>(House.Points)</code></pre></div>
+<p>Make a Grid. First define boundaries or extent of grid <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">grid.extent &lt;-<span class="st"> </span><span class="kw">extent</span>(<span class="kw">bbox</span>(OA.Census.sp))        </code></pre></div>
+<p>Next grade a raster object from the extent <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">grid.raster &lt;-<span class="st"> </span><span class="kw">raster</span>(grid.extent)            </code></pre></div>
+<p>Specify our dimensions; split extent into 30 x 30 cells <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">dim</span>(grid.raster) &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">50</span>,<span class="dv">50</span>)       </code></pre></div>
+<p>Project the grid using our shapefile CRS <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">projection</span>(grid.raster) &lt;-<span class="st"> </span><span class="kw">CRS</span>(<span class="kw">proj4string</span>(OA.Census.sp))  </code></pre></div>
+<p>Convert into a spatial data frame <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">grid.sp &lt;-<span class="st"> </span><span class="kw">as</span>(grid.raster, <span class="st">&#39;SpatialPolygonsDataFrame&#39;</span>) </code></pre></div>
+<p>Convert spatial data frame to matrix data structure <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">grid.matrix &lt;-<span class="st"> </span>grid.sp[OA.Census.sp,]</code></pre></div>
+<pre><code>## Warning in RGEOSBinPredFunc(spgeom1, spgeom2, byid, func): spgeom1 and spgeom2
+## have different proj4 strings</code></pre>
+<p>Aggregate housing prices by grid matrix <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">OA.grid &lt;-<span class="st"> </span><span class="kw">aggregate</span>(<span class="dt">x=</span>House.Points.sp[<span class="st">&quot;Price&quot;</span>], <span class="dt">by=</span>grid.matrix,<span class="dt">FUN=</span>mean)</code></pre></div>
+<p>If there is a null value, assign 0 <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">OA.grid<span class="op">$</span>Price[<span class="kw">is.na</span>(OA.grid<span class="op">$</span>Price)] &lt;-<span class="st"> </span><span class="dv">0</span></code></pre></div>
+<p>Inspect data range <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">summary</span>(OA.grid<span class="op">@</span>data)</code></pre></div>
+<pre><code>##      Price         
+##  Min.   :       0  
+##  1st Qu.:       0  
+##  Median :  443502  
+##  Mean   :  636711  
+##  3rd Qu.:  888452  
+##  Max.   :13500000</code></pre>
+<p>Map <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(OA.grid) <span class="op">+</span><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col =</span> <span class="st">&quot;Price&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;quantile&quot;</span>, <span class="dt">n =</span> <span class="dv">7</span>, <span class="dt">title =</span> <span class="st">&quot;Mean House Price (£)&quot;</span>) </code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-39-1.png" width="672" /> ## Point Data Method: Kernel Density Surface Runs the kernel density estimation; look up the function parameters for more options</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">kde.output &lt;-<span class="st"> </span><span class="kw">kernelUD</span>(House.Points.sp, <span class="dt">h=</span><span class="st">&quot;href&quot;</span>, <span class="dt">grid =</span> <span class="dv">1000</span>)</code></pre></div>
+<pre><code>## Warning in kernelUD(House.Points.sp, h = &quot;href&quot;, grid = 1000): xy should contain only one column (the id of the animals)
+## id ignored</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">plot</span>(kde.output)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>Converts to raster <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">kde &lt;-<span class="st"> </span><span class="kw">raster</span>(kde.output)</code></pre></div>
+<p>Sets projection to British National Grid <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">projection</span>(kde) &lt;-<span class="st"> </span><span class="kw">CRS</span>(<span class="st">&quot;+init=EPSG:27700&quot;</span>)</code></pre></div>
+<p>Maps the raster in tmap, “ud” is the density variable <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(kde) <span class="op">+</span><span class="st"> </span><span class="kw">tm_raster</span>(<span class="st">&quot;ud&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-43-1.png" width="672" /></p>
+<p>Creates a bounding box based on the extents of the Output.Areas polygon <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">bounding_box &lt;-<span class="st"> </span><span class="kw">bbox</span>(OA.Census.sp)</code></pre></div>
+<p>Maps the raster within the bounding box <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(kde, <span class="dt">bbox =</span> bounding_box) <span class="op">+</span><span class="st"> </span><span class="kw">tm_raster</span>(<span class="st">&quot;ud&quot;</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-45-1.png" width="672" /></p>
+<p>Mask the raster by the output area polygon <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">masked_kde &lt;-<span class="st"> </span><span class="kw">mask</span>(kde, Output.Areas)</code></pre></div>
+<p>Maps the masked raster, also maps white output area boundaries <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(masked_kde, <span class="dt">bbox =</span> bounding_box) <span class="op">+</span><span class="st"> </span><span class="kw">tm_raster</span>(<span class="st">&quot;ud&quot;</span>, <span class="dt">style =</span> <span class="st">&quot;quantile&quot;</span>, <span class="dt">n =</span> <span class="dv">100</span>, <span class="dt">legend.show =</span> <span class="ot">FALSE</span>, <span class="dt">palette =</span> <span class="st">&quot;YlGnBu&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(Output.Areas) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">alpha=</span>.<span class="dv">3</span>, <span class="dt">col =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_layout</span>(<span class="dt">frame =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-47-1.png" width="672" /></p>
+<p>Compute homeranges for 75%, 50%, 25% of points, objects are returned as spatial polygon data frames <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">range75 &lt;-<span class="st"> </span><span class="kw">getverticeshr</span>(kde.output, <span class="dt">percent =</span> <span class="dv">75</span>)
+range50 &lt;-<span class="st"> </span><span class="kw">getverticeshr</span>(kde.output, <span class="dt">percent =</span> <span class="dv">50</span>)
+range25 &lt;-<span class="st"> </span><span class="kw">getverticeshr</span>(kde.output, <span class="dt">percent =</span> <span class="dv">25</span>)</code></pre></div>
+<p>The code below creates a map of several layers using tmap <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tm_shape</span>(Output.Areas) <span class="op">+</span><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">col =</span> <span class="st">&quot;#f0f0f0&quot;</span>) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">alpha=</span>.<span class="dv">8</span>, <span class="dt">col =</span> <span class="st">&quot;white&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(House.Points) <span class="op">+</span><span class="st"> </span><span class="kw">tm_dots</span>(<span class="dt">col =</span> <span class="st">&quot;blue&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(range75) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">alpha=</span>.<span class="dv">7</span>, <span class="dt">col =</span> <span class="st">&quot;#fb6a4a&quot;</span>, <span class="dt">lwd =</span> <span class="dv">2</span>) <span class="op">+</span><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">alpha=</span>.<span class="dv">1</span>, <span class="dt">col =</span> <span class="st">&quot;#fb6a4a&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(range50) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">alpha=</span>.<span class="dv">7</span>, <span class="dt">col =</span> <span class="st">&quot;#de2d26&quot;</span>, <span class="dt">lwd =</span> <span class="dv">2</span>) <span class="op">+</span><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">alpha=</span>.<span class="dv">1</span>, <span class="dt">col =</span> <span class="st">&quot;#de2d26&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_shape</span>(range25) <span class="op">+</span><span class="st"> </span><span class="kw">tm_borders</span>(<span class="dt">alpha=</span>.<span class="dv">7</span>, <span class="dt">col =</span> <span class="st">&quot;#a50f15&quot;</span>, <span class="dt">lwd =</span> <span class="dv">2</span>) <span class="op">+</span><span class="st"> </span><span class="kw">tm_fill</span>(<span class="dt">alpha=</span>.<span class="dv">1</span>, <span class="dt">col =</span> <span class="st">&quot;#a50f15&quot;</span>) <span class="op">+</span>
+<span class="st">  </span><span class="kw">tm_layout</span>(<span class="dt">frame =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p><img src="bookdown-demo_files/figure-html/unnamed-chunk-49-1.png" width="672" /></p>
+<p>Write your kernel density surface to raster format <br /></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">writeRaster</span>(masked_kde, <span class="dt">filename =</span> <span class="st">&quot;kernel_density.grd&quot;</span>)</code></pre></div>
+<pre><code>## class      : RasterLayer 
+## dimensions : 858, 1000, 858000  (nrow, ncol, ncell)
+## resolution : 22.41141, 22.41141  (x, y)
+## extent     : 516573.8, 538985.2, 174652.8, 193881.8  (xmin, xmax, ymin, ymax)
+## crs        : +init=EPSG:27700 +proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +datum=OSGB36 +units=m +no_defs +ellps=airy +towgs84=446.448,-125.157,542.060,0.1502,0.2470,0.8421,-20.4894 
+## source     : /Users/HIPark/Documents/micrometcalf/Intro2GIS/book/kernel_density.grd 
+## names      : ud 
+## values     : 5.060993e-10, 8.224823e-08  (min, max)</code></pre>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="lab-7-esda-web-mapping.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/lunr.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="book_assets/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

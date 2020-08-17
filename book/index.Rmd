@@ -9,3 +9,6 @@ output:
 ---
 
 # Intro
+
+### Author: M. Kolak, Center for Spatial Data Science
+### Co-author: H.I. Park, Univeristy of Chicago
