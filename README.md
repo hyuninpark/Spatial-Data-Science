@@ -1,5 +1,6 @@
-# Intro2GIS
+Link to the final textbook
 
+https://makosak.github.io/Intro2GIS/docs/index.html
 
 - Lab 1: Alt Food Asset Map, QGIS
 - Lab 2: Opioid Deaths Map, GeoDa
